@@ -1,0 +1,62 @@
+/* --------------------------------------------------------
+Style Sheet for EMS - Cards
+version: 1.0
+last modified: 9.10.2018 by Akil B.
+author: Akil B.
+email: akil.bukhari@ipathsolutions.co.in
+website: http://unipathsolutions.com
+----------------------------------------------------------*/
+
+/*====================:CARD:=======================*/
+.card{box-shadow:0 4px 8px 0 #f2f2f2;transition:0.3s;background:#f2f2f2;}
+.card:hover{box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0.2);}
+/*====================:END-CARD:=======================*/
+
+/*====================:CONTAINER FOR CARD:=======================*/
+
+.card .new-container{padding:2px 25px;background:#e6e6e6;height:400px;overflow:scroll;}
+
+.card .new-container>div{margin-bottom:8px;}
+/*====================:END-CONTAINER FOR CARD:=======================*/
+
+/*====================:SCROLLBAR FOR LIST OF CONTAINER:=======================*/
+
+.card .new-container::-webkit-scrollbar{width:.5em;}
+
+.card .new-container::-webkit-scrollbar-thumb:hover{background:#4b74a2;border-radius:50px;}
+
+.card .new-container::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3);}
+
+.card .new-container::-webkit-scrollbar-thumb{transition:.5s;background-image:linear-gradient(#069caa, rgb(0, 174, 255));outline:.2px solid slategrey;}
+
+/*====================:END-SCROLLBAR FOR LIST OF CONTAINER:=======================*/
+
+/*====================:CARD-HEADER:=======================*/
+
+.card #top-bar{height:20px;background:#069cab}
+
+.card .title-bar{height:50px;widows:100%;background:#f2f2f2;}
+
+.card .title-bar span{font-size:1.5em;}
+
+.card .card-title{font-size:15px;font-weight:bold;padding-top:14px;padding-left:28px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:#069cab;}
+
+.card .card-icon{font-size:15px;padding-top:14px;padding-right:28px;}
+
+.card .card-icon .fa-times,.card-icon .fa-minus{transition:.3s;}
+.card .card-icon .fa-times:hover{color:#fd636b;}
+.card .card-icon .fa-minus:hover{color:#3be8b0;}
+/*====================:CARD-HEADER:=======================*/
+
+/*====================:LIST:=======================*/
+.card P{font-size:1.3em;padding:.2px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;transition:.5s;}
+.card P:hover{background:#f2f2f2;padding:8px;cursor:pointer;border-left:25px solid #069caa;}
+.card P:hover~span{background:linear-gradient(#069caa, rgb(16, 116, 146));text-align:center;border-radius:0px 8px 8px 0px;font-size:1.22em;}
+.card P+span{background:#4b74a2;padding:10px 25px;color:#fffcff;border-radius:8px;display:inline-block;transition:.5s;text-align:center;}
+/*====================:END-LIST:=======================*/
+
+/*====================:POSITION RELATIVE FOR Z-INDEX:=======================*/
+
+.card .card-1,.card-2,.card-3{position:relative;}
+/*====================:END-POSITION RELATIVE FOR Z-INDEX:=======================*/
+

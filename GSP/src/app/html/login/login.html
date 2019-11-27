@@ -1,0 +1,29 @@
+<link rel='stylesheet' href='/src/app/css/login.css'>
+<div class="loader_wrapper" *ngIf='_GlobalFunctionVariables.isLoading'>
+    <div class="loader_in"></div>
+</div>
+<!--Danger notification-->
+<div class="alert alert-danger" *ngIf="_GlobalFunctionVariables.showErrorMessage">
+    <strong><i class="fa fa-exclamation-circle"></i></strong>
+    <span class="message">{{_GlobalFunctionVariables.ErrorMessage}}</span>
+    <a class="c_pointer close" (click)="_GlobalFunctionVariables.showErrorMessage = false"></a>
+</div>
+<!--End of Danger notification-->
+
+<div class="login">
+    <div class="login_wrap">
+        <div class="login_center">
+            <!--LOGIN FORM Start-->
+            <div class="login_container">
+                <div class="login_header">
+                    <img class="logo" name='avtar' src="/src/app/images/gsp_logo_white.png">
+                </div>
+                <router-outlet>
+                </router-outlet>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2019 GSP | All rights reserved.</p>
+    </footer>
+</div>

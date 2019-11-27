@@ -1,0 +1,68 @@
+home-root > ng-component { position: absolute; top: 0; }
+img[name="loader"]{ position: absolute; left: 47%; top: 47%; z-index: 99999; height: 100px;width: 100px; }
+
+.full-blu{ position: absolute; top: 0;left: 0;width: 100%;height: 100%;z-index: 99998; background:rgba(0,0,0,.5); }
+
+.wrong{text-align:center;color:#fff;font-size:23px;line-height:9px;padding-left:1px;}
+.pos-center{left:calc(50vw - 200px/1);}
+.mt-20{margin-top:20px;}
+.toast__svg{fill:#fff;}
+.toast{z-index:2147483647;font-size: 16px;text-align:left;padding:21px 0;border-radius:4px;max-width:500px;top:0px;position:relative;box-shadow:1px 7px 14px -5px rgba(0,0,0,0.2);}
+.bg-green{  background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgba(43,222,63,1) 100%);}
+.bg-red{  background: linear-gradient(90deg, rgba(255,255,255,1) 44%, rgb(240, 41, 101) 100%);}
+.toast:before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-top-left-radius:4px;border-bottom-left-radius:4px;}
+.toast__icon{padding: 17px;position:absolute;top:50%;left:22px;transform:translateY(-50%);width:14px;height:14px;padding:7px;border-radius:50%;display:inline-block;}
+.toast__type{color:#3e3e3e;font-weight:700;margin-top:0;margin-bottom:8px;}
+.toast__message{font-size:14px;margin-top:0;margin-bottom:0;color:#878787;}
+.toast__content{padding-left:70px;padding-right:60px;}
+.toast__close{position:absolute;right:22px;top:50%;width:14px;cursor:pointer;height:14px;fill:#ffffff;transform:translateY(-50%);}
+.toast__icon i{    border: 1px solid; padding: 5px; border-radius: 50%; position: relative; top: -19px; left: -12px; padding: 10px 12px;}
+
+    /*====================:EMMET RULES:=======================*/
+.mb-8{margin-bottom:8px;}
+.pt-8{padding-top:8px;}
+.pt-18{padding-top:18px;}
+/*====================:EMMET RULES:=======================*/
+
+/*Employee Page*/
+
+
+kendo-grid .k-filtercell .k-filtercell-wrapper>.k-textbox {width: 100%;min-width: 0; border: none;}
+kendo-grid  input.k-textbox{position: relative;width: 100%;padding-right: 0px;}
+kendo-grid .k-button{border:none;width: 0px;padding: 0;margin: 0;position: absolute;z-index: 5;margin-left: -10px;}
+.k-columnmenu-item-content{position:absolute;top:64px;left:232px;background:#f9f9f9;width:213px;padding-top:11px;box-shadow:-3px 3px 39px -13px rgba(0,0,0,0.81);}
+.k-columnmenu-item-content{position:absolute;top:66px;left:-212px;background:#f9f9f9;width:213px;padding-top:11px;box-shadow:-3px 3px 39px -13px rgba(0,0,0,0.81);}
+.k-grid-header .k-header>.k-link {text-transform: uppercase;}
+.k-datepicker .k-select, .k-datetimepicker .k-select, .k-timepicker .k-select { padding: 0;border-width: 0; background: #fff!important;
+position: absolute;right: -8px;top: 8px;}
+
+
+
+/*hide show*/
+.k-dropdown-operator .k-select{display: none;}
+ kendo-grid button{background:#fff!important;border:none;}
+.k-numerictextbox .k-select{width: 0;}
+.k-filtercell .k-filtercell-wrapper, .k-filtercell>span{background:#fff;}
+.k-numeric-wrap{border-style:none;}
+.k-filter-row td, .k-filter-row th{padding:0;}
+.k-autocomplete, .k-combobox .k-dropdown-wrap, .k-dateinput .k-dateinput-wrap, .k-datepicker .k-picker-wrap, .k-datetimepicker .k-picker-wrap, .k-flatcolorpicker .k-color-value, .k-input.k-textbox, .k-multiselect-wrap, .k-numerictextbox .k-numeric-wrap, .k-textarea, .k-textbox, .k-timepicker .k-picker-wrap{
+    border:none;
+}
+
+
+ /*before-after icons replacement*/
+ .k-i-columns::after{content:"\f0da";font-family:fontawesome;position:absolute;right:12px;}
+ .k-i-filter::after{content:"\f0da";font-family:fontawesome;position:absolute;right:12px;}
+ .k-i-filter-clear:before{content:"\f00d";font-family: fontawesome;background:none;height: 100%;width: 100%;margin-left: -8px;padding-left: 4px;}
+ .k-i-more-vertical:before, .k-i-vbars:before {content: "\E031"; margin-left: 9px;}
+ .k-i-filter-clear:before {content: "\f00d";font-family: fontawesome;background: none;height: 100%;width: 100%; }
+ .k-datepicker + .k-filtercell-operator > .k-clear-button-visible > .k-i-filter-clear:before {content: "\f00d";font-family: fontawesome;background: none;height: 100%;width: 100%; margin-left: -48px; padding-left: 4px;}
+
+ #k-2c096423-9384-40b3-a87d-af37ef3470bf .k-input{display: none;}
+ 
+/*End Employee Page*/
+.k-grid tbody td {white-space: nowrap;padding: 4px!important;}
+
+
+
+

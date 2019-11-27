@@ -1,0 +1,20 @@
+
+
+==========================Wed Nov 06 2019 10:14:56 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= Cannot read property 'userId' of undefined
+Error Desc:= message TypeError: Cannot read property 'userId' of undefined
+    at Object.userId [as getDepotList] (C:\Pratik\SVN\GSP Admin\GSP_API\model/common.js:50:33)
+    at Object.getDepotList (C:\Pratik\SVN\GSP Admin\GSP_API\action/common.js:14:34)
+    at getDepotList (C:\Pratik\SVN\GSP Admin\GSP_API\services/common.js:53:35)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/common.js:52:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""

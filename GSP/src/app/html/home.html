@@ -1,0 +1,164 @@
+<link rel='stylesheet' href='/src/app/css/app.css'>
+<div class="app_loading" *ngIf='_GlobalFunctionVariables.isLoading'>
+    <div class="loading_wrap"></div>
+</div>
+
+<!--Success notification-->
+<div class="alert alert-success" *ngIf="_GlobalFunctionVariables.showSuccessMessage">
+    <strong><i class="fa fa-check-circle"></i></strong>
+    <span class="message">{{_GlobalFunctionVariables.SuccessMessage}}</span>
+    <a class="c_pointer close" (click)="_GlobalFunctionVariables.showSuccessMessage = false"></a>
+</div>
+<!--End of Success notification-->
+
+<!--Danger notification-->
+<div class="alert alert-danger" *ngIf="_GlobalFunctionVariables.showErrorMessage">
+    <strong><i class="fa fa-exclamation-circle"></i></strong>
+    <span class="message">{{_GlobalFunctionVariables.ErrorMessage}}</span>
+    <a class="c_pointer close" (click)="_GlobalFunctionVariables.showErrorMessage = false"></a>
+</div>
+<!--End of Danger notification-->
+
+
+<div class="app_box {{hiddenClass}}">
+    <header class="app_head">
+        <div class="app_logo">
+            <a href="#/"> <img class="mainlogo" title="Indsigt ERP" alt="Indsigt ERP" src="/src/app/images/logo.png">
+            </a>
+        </div>
+        <div class="app_title">
+            <a class="sidemenu_icon" (click)="Menuclick()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+            <div class="pull-right" id="headermenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="Hide_Mob_View"> {{displayName}}</span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a *ngIf='_GlobalFunctionVariables.gridName != ""'
+                                    (click)='_GlobalFunctionVariables.DefaultGridLayout()'
+                                    title="Default Layout">Default Layout <i class="fa fa-th-large"
+                                        aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a (click)='_GlobalFunctionVariables.SaveGridLayout()'
+                                    *ngIf='_GlobalFunctionVariables.gridName != ""' title="Save Layout">Save Layout <i
+                                        class="fa fa-floppy-o" aria-hidden="true"></i></a>
+                            </li>
+                            <!-- <li><a>Change Password <i class="fa fa-key" aria-hidden="true"></i></a></li> -->
+                            <li><a (click)="onLogout()">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+
+        </div>
+    </header>
+
+    <section class="app_content">
+        <div class="app_menu">
+            <!-- <div *ngFor="let item of _GlobalFunctionVariables.userLeftMenu;">
+                <p id='tgl-1' class="title" *ngIf="(item.c && item.c.length> 0 )"> {{item.d}} </p> -->
+                <!-- Master Menu Name -->
+
+                <!-- <i class="fa {{itme.i}}" *ngIf="!(item.c &&
+                                item.c.length> 0 )"></i> -->
+                                 <!-- Sub Master Menu Icone -->
+
+                <!-- <p id='tgl-1' class="title" [routerLink]="[item.u]"
+                    (click)='showMenu= false; expandStart= false; showIcon= false;'
+                    *ngIf="!(item.c && item.c.length> 0 )">
+                    {{item.d}} </p> -->
+                     <!-- Sub Master Menu -->
+
+                <!-- <div class="empoyee-itms" *ngIf="(item.c && item.c.length> 0 )">
+                    <div class="item" *ngFor="let subitem of item.c;" [routerLink]="[subitem.u]"
+                        (click)='showMenu= false; expandStart= false; showIcon= false;'>
+                        <i class="fa {{subitem.i}}"></i>
+                        <span>
+                            {{subitem.d}}
+                        </span>  -->
+                        <!-- Sub Menu -->
+                    <!-- </div>
+                </div>
+            </div> -->
+            <kendo-panelbar expandMode="single" [hidden]="!ISleftMenuShowHide">
+                <kendo-panelbar-item *ngFor="let item of _GlobalFunctionVariables.userLeftMenu;" [class]="'panelimg'"  [imageUrl]="item.i" [expanded]=item.expanded [title]=item.d>
+                    <kendo-panelbar-item *ngFor="let subitem of item.items;" [routerLink]="[subitem.u]" [selected]="subitem.ul.includes(url)" [iconClass]="'fa fa-btc'" [title]=subitem.d></kendo-panelbar-item>
+                </kendo-panelbar-item>
+            </kendo-panelbar>
+            <!-- <kendo-menu [hidden]="ISleftMenuShowHide" (select)="onSelect($event)" [openOnClick]="true" [items]="_GlobalFunctionVariables.userLeftMenu" [vertical]="true" style="display:inline-block;">
+              
+            </kendo-menu> -->
+            <kendo-menu [hidden]="ISleftMenuShowHide" [items]="_GlobalFunctionVariables.userLeftMenu" [openOnClick]="true" [vertical]="true">
+                <ng-template kendoMenuItemTemplate let-item="item">
+                    <img  *ngIf="(item.i != '')" title="{{item.text}}" src="{{item.i}}">
+                    <span *ngIf="item.i == ''" (click)="onSelect(item)">{{item.d}}</span>
+                    <!-- {{item.text}} -->
+                </ng-template>
+           </kendo-menu>
+            <!-- <kendo-menu [hidden]="ISleftMenuShowHide" [items]="items" [openOnClick]="true" [vertical]="true">
+                <ng-template kendoMenuItemTemplate let-item="item">
+                    <img  *ngIf="(item.i != '')" title="{{item.text}}" src="{{item.i}}">
+                    <span *ngIf="item.i == ''">{{item.text}}</span>
+                </ng-template>
+           </kendo-menu> -->
+        </div>
+
+        <div class="app_data" style="padding-top: 50px; min-height: 100vh;">
+            <div class="app_content dashboard_view">
+                <router-outlet>
+
+                </router-outlet>
+            </div>
+            <footer class="app_foot">
+                <p>Copyright &copy; 2019 | <a href="http://www.unipathsolutions.com/" target="_blank">GSP Crop</a> |
+                    All rights reserved</p>
+            </footer>
+        </div>
+    </section>
+
+
+    <!--<div class="all-icons open">
+
+            <i (click)='_GlobalFunctionVariables.SaveGridLayout()' *ngIf='_GlobalFunctionVariables.gridName != ""'
+                title="Save Layout">
+                <img src="https://svgur.com/i/9HY.svg" height="60" width="60">
+            </i>
+
+            <i *ngIf='_GlobalFunctionVariables.gridName != ""' (click)='_GlobalFunctionVariables.DefaultGridLayout()'
+                title="Default Layout">
+                <img src="https://svgur.com/i/9GE.svg" height="60" width="60">
+            </i>
+        </div> -->
+
+
+
+    <!-- <div class="bottom">
+                <div class="icon profile" title="Employee Management
+                            Systeam">
+                    <a href="http://www.unipathsolutions.com/" target="_blank">
+                        <img class="img-responsive" src="/src/app/images/favicons/apple-icon-72x72.png" />
+                    </a>
+                    <span>{{displayName}}</span>
+                </div>
+
+                <div class="icon power" title="Power" (click)="onLogout()">
+                    <i class="fa fa-power-off"></i>
+
+                    <span>Log out</span>
+                </div>
+            </div>-->
+
+
+
+
+
+
+</div>

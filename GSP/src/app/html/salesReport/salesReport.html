@@ -1,0 +1,20 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        Reports > Sales Report
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" title="Refresh" (click)="Refresh()" *hasrights="['customermaster','write']">
+            <img src="/src/app/images/icons/refresh_header_icon.png">
+        </button>
+        <button class="btn btn_icon" title="Save As Excel" (click)="SaveasExcel()" *hasrights="['customermaster','write']">
+                <img src="/src/app/images/icons/export_exl_icon.png">
+        </button>
+    </div>
+</div>
+
+<div>
+    <my-grid [id]="'CustomerList'" [height]="gridHeight" [url]="'/salesReport/list'" [columnsConfig]="columnsConfig"
+        fileName="CustomerList.xlsx" [KeyGridSelectBy]="'id'">
+        <!-- [KeyGridSelectBy]="'ProductID'" [MultiSelectGrid]="true" -->
+    </my-grid>
+</div>

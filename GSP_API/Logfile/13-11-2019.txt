@@ -1,0 +1,370 @@
+
+
+==========================Wed Nov 13 2019 06:56:05 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= INSERT has more expressions than target columns
+Error Desc:= message error: INSERT has more expressions than target columns
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":768,"severity":"ERROR","code":"42601","internalPosition":"140","internalQuery":"insert into temp_tblagingreport(customercodeid, outstanding)\r\n\t\tselect\r\n\t\tar.customercodeid\r\n\t\t,sum(ar.allinclusiveamt) as outstanding\r\n\t\t,sum(ar.outstanding5) + sum(ar.outstanding6) + sum(ar.outstanding7) + sum(ar.outstanding8) as outstandingafter120\r\n\t\tfrom  getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm   on gcr.customerid = cm.id\r\n\t\tinner join tblagingreport as ar on ar.customercodeid = cm.id\r\n\t\twhere cm.id = COALESCE(p_customerid,cm.id)\r\n\t\t group by ar.customercodeid","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 85 at SQL statement","file":"analyze.c","line":"862","routine":"transformInsertRow"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"1","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Wed Nov 13 2019 06:56:05 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= INSERT has more expressions than target columns
+Error Desc:= message error: INSERT has more expressions than target columns
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":768,"severity":"ERROR","code":"42601","internalPosition":"140","internalQuery":"insert into temp_tblagingreport(customercodeid, outstanding)\r\n\t\tselect\r\n\t\tar.customercodeid\r\n\t\t,sum(ar.allinclusiveamt) as outstanding\r\n\t\t,sum(ar.outstanding5) + sum(ar.outstanding6) + sum(ar.outstanding7) + sum(ar.outstanding8) as outstandingafter120\r\n\t\tfrom  getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm   on gcr.customerid = cm.id\r\n\t\tinner join tblagingreport as ar on ar.customercodeid = cm.id\r\n\t\twhere cm.id = COALESCE(p_customerid,cm.id)\r\n\t\t group by ar.customercodeid","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 85 at SQL statement","file":"analyze.c","line":"862","routine":"transformInsertRow"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 06:56:51 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= INSERT has more expressions than target columns
+Error Desc:= message error: INSERT has more expressions than target columns
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":768,"severity":"ERROR","code":"42601","internalPosition":"140","internalQuery":"insert into temp_tblagingreport(customercodeid, outstanding)\r\n\t\tselect\r\n\t\tar.customercodeid\r\n\t\t,sum(ar.allinclusiveamt) as outstanding\r\n\t\t,sum(ar.outstanding5) + sum(ar.outstanding6) + sum(ar.outstanding7) + sum(ar.outstanding8) as outstandingafter120\r\n\t\tfrom  getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm   on gcr.customerid = cm.id\r\n\t\tinner join tblagingreport as ar on ar.customercodeid = cm.id\r\n\t\twhere cm.id = COALESCE(p_customerid,cm.id)\r\n\t\t group by ar.customercodeid","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 86 at SQL statement","file":"analyze.c","line":"862","routine":"transformInsertRow"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"1","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Wed Nov 13 2019 06:56:51 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= INSERT has more expressions than target columns
+Error Desc:= message error: INSERT has more expressions than target columns
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":768,"severity":"ERROR","code":"42601","internalPosition":"140","internalQuery":"insert into temp_tblagingreport(customercodeid, outstanding)\r\n\t\tselect\r\n\t\tar.customercodeid\r\n\t\t,sum(ar.allinclusiveamt) as outstanding\r\n\t\t,sum(ar.outstanding5) + sum(ar.outstanding6) + sum(ar.outstanding7) + sum(ar.outstanding8) as outstandingafter120\r\n\t\tfrom  getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm   on gcr.customerid = cm.id\r\n\t\tinner join tblagingreport as ar on ar.customercodeid = cm.id\r\n\t\twhere cm.id = COALESCE(p_customerid,cm.id)\r\n\t\t group by ar.customercodeid","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 86 at SQL statement","file":"analyze.c","line":"862","routine":"transformInsertRow"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 06:57:15 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= operator does not exist: boolean || boolean
+Error Desc:= message error: operator does not exist: boolean || boolean
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":4504,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"432","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcm.id\r\n\t\t,cm.customercode as cc\r\n\t\t,cm.customercreateddate as ccd\r\n\t\t,CASE WHEN((gstpan::int + legalstatus::int + legaldepartment::int + creditorder::int + legalcaseother::int + balanceconfirm::int + chequereturn::int + inactivecustomer::int + specialcase::int + caseremark::int) > 0 ) \r\n\t\t\tthen true \r\n\t\t\tWHEN((COALESCE(tar.outstandingafter120,0.00) > 0) || ((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0))\r\n\t\t\tthen true\r\n\t\t\telse false \r\n\t\t\tend as ib\r\n\t\t,CASE WHEN(gstpan = 1::bit) then 'GST/PAN,' else '' end \r\n\t\t|| CASE WHEN(legalstatus = 1::bit) then 'Legal Status,' else '' end \r\n\t\t|| CASE WHEN(legaldepartment = 1::bit) then 'Legal Department,'  else '' end \r\n\t\t|| CASE WHEN(creditorder = 1::bit) then 'Credit-Order Block,' else '' end\r\n\t\t|| CASE WHEN(legalcaseother = 1::bit) then 'Legal Case to Other Company,'  else '' end \r\n\t\t|| CASE WHEN(balanceconfirm = 1::bit) then 'Balance Confirmation,'  else '' end \r\n\t\t|| CASE WHEN(chequereturn = 1::bit) then 'Cheque Return,'  else '' end \r\n\t\t|| CASE WHEN(inactivecustomer = 1::bit) then 'Inactive Customer,'  else '' end\r\n\t\t|| CASE WHEN(specialcase = 1::bit) then 'Special Case,'  else '' end \r\n\t\t|| CASE WHEN(caseremark = 1::bit) then 'Sp. Case Remark,'  else '' end \r\n\t\t|| CASE WHEN(COALESCE(tar.outstandingafter120,0.00) > 0) then 'Outstanding Overdue as per Payment Terms,'  else '' end \r\n\t\t|| CASE WHEN((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0) then 'CREDIT LIMIT EXCEEDS , PLEASE MAKE INVOICE BELOW RS.'||COALESCE(cm.creditlimit,0.00)||','  else '' end as br\r\n\t\t,cm.customername as cn\r\n\t\t,cd.city1 as c\r\n\t\t,cd.mobileno as mn\r\n\t\t--,cm.customercategoryid as cci\r\n\t\t,cc.lookupvalue as  ccat -- customercatagory\r\n\t\t--,cm.customertypeid as cti\r\n\t\t,ct.lookupvalue as ct-- customertype\r\n\t\t,category.lookupvalue as cat--category\r\n\t\t--,cm.categoryid\tas ci\r\n\t\t,COALESCE(cd.address1||'\\n','') ||COALESCE(address2||'\\n','') ||COALESCE(city1||'\\n','')||COALESCE(state.state,'')||'-'||COALESCE(postalcode) as ad--address\r\n\t\t,CASE WHEN((CASE WHEN(cm.tea is not null) then 1 else 0 end + CASE WHEN(cm.mango is not null) then 1 else 0 end + CASE WHEN(cm.seeds is not null) then 1 else 0 end) > 0) then true else false end as ic--iscrop\r\n\t\t,CASE WHEN(cm.tea is not null) then 'Tea,' else '' end || CASE WHEN(cm.mango is not null) then 'Mango,' else '' end || CASE WHEN(cm.seeds is not null) then 'Seeds' else '' end as crop\r\n\t\t,t.lat\r\n\t\t,t.lng\r\n\t\t,cm.zoneid as zi\r\n\t\t,cd.subregionid as sri\r\n\t\t,cd.salesofficeid as  di--depotid\r\n\t\t,cd.salesdistrictid as sdi\r\n\t\t,COALESCE(tsr.sales,0.00) as s\r\n\t\t,CASE WHEN(cm.abpvalue>0) then (tsr.sales*100)/cm.abpvalue else 100  end as sp\r\n\t\t,COALESCE(tsr.salesreturn,0.00) as sr\r\n\t\t,100 as srp\r\n\t\t,COALESCE(cm.creditlimit,0.00) as cl\r\n\t\t,CASE WHEN(cm.creditlimit > 0) then (tar.outstanding * 100) / cm.creditlimit else 100 end as clp\r\n\t\t,COALESCE(tcr.collection,0.00) as col\r\n\t\t,COALESCE(tar.outstanding,0.00) as o\r\n\t\t,COALESCE(tdso.averagedays,0) as a\r\n\t\t,cd.regiondescriptionid as si\r\n\t\t,COALESCE(cm.abpvalue,0.00) as abp\r\n\t\t,COALESCE(tar.outstandingafter120,0.00) as oa120\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblcustomerdetail as cd on cd.cid=cm.id\r\n\t\tleft join tblstate as state on state.id= cd.regiondescriptionid\r\n\t\tleft join tbllookupvalues as cc on cc.lookupvalueid = cm.customercategoryid\r\n\t\tleft join tbllookupvalues as ct on ct.lookupvalueid = cm.customertypeid\r\n\t\tleft join tbllookupvalues as category on category.lookupvalueid = cm.categoryid\r\n\t\tleft join temp_tblsalesreport as tsr on tsr.customercodeid = cm.id\r\n\t\tleft join temp_tblcollectionreport as tcr on tcr.customercodeid = cm.id\r\n\t\tleft join temp_tblagingreport as tar on tar.customercodeid = cm.id\r\n\t\tleft join temp_tbldsoreport as tdso on tdso.customercodeid = cm.id\r\n\t\tleft join (\r\n\t\tselect \r\n\t\trow_number() over(partition by customerid order by id desc) as no\r\n\t\t,customerid\r\n\t\t,lat\r\n\t\t,lng\r\n\t\tfrom tblcustomerlatlong  ) as t on t.no=1 and t.customerid = cm.id\r\n\t\t) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 107 at SQL statement","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"1","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Wed Nov 13 2019 06:57:15 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= operator does not exist: boolean || boolean
+Error Desc:= message error: operator does not exist: boolean || boolean
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":4504,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"432","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcm.id\r\n\t\t,cm.customercode as cc\r\n\t\t,cm.customercreateddate as ccd\r\n\t\t,CASE WHEN((gstpan::int + legalstatus::int + legaldepartment::int + creditorder::int + legalcaseother::int + balanceconfirm::int + chequereturn::int + inactivecustomer::int + specialcase::int + caseremark::int) > 0 ) \r\n\t\t\tthen true \r\n\t\t\tWHEN((COALESCE(tar.outstandingafter120,0.00) > 0) || ((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0))\r\n\t\t\tthen true\r\n\t\t\telse false \r\n\t\t\tend as ib\r\n\t\t,CASE WHEN(gstpan = 1::bit) then 'GST/PAN,' else '' end \r\n\t\t|| CASE WHEN(legalstatus = 1::bit) then 'Legal Status,' else '' end \r\n\t\t|| CASE WHEN(legaldepartment = 1::bit) then 'Legal Department,'  else '' end \r\n\t\t|| CASE WHEN(creditorder = 1::bit) then 'Credit-Order Block,' else '' end\r\n\t\t|| CASE WHEN(legalcaseother = 1::bit) then 'Legal Case to Other Company,'  else '' end \r\n\t\t|| CASE WHEN(balanceconfirm = 1::bit) then 'Balance Confirmation,'  else '' end \r\n\t\t|| CASE WHEN(chequereturn = 1::bit) then 'Cheque Return,'  else '' end \r\n\t\t|| CASE WHEN(inactivecustomer = 1::bit) then 'Inactive Customer,'  else '' end\r\n\t\t|| CASE WHEN(specialcase = 1::bit) then 'Special Case,'  else '' end \r\n\t\t|| CASE WHEN(caseremark = 1::bit) then 'Sp. Case Remark,'  else '' end \r\n\t\t|| CASE WHEN(COALESCE(tar.outstandingafter120,0.00) > 0) then 'Outstanding Overdue as per Payment Terms,'  else '' end \r\n\t\t|| CASE WHEN((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0) then 'CREDIT LIMIT EXCEEDS , PLEASE MAKE INVOICE BELOW RS.'||COALESCE(cm.creditlimit,0.00)||','  else '' end as br\r\n\t\t,cm.customername as cn\r\n\t\t,cd.city1 as c\r\n\t\t,cd.mobileno as mn\r\n\t\t--,cm.customercategoryid as cci\r\n\t\t,cc.lookupvalue as  ccat -- customercatagory\r\n\t\t--,cm.customertypeid as cti\r\n\t\t,ct.lookupvalue as ct-- customertype\r\n\t\t,category.lookupvalue as cat--category\r\n\t\t--,cm.categoryid\tas ci\r\n\t\t,COALESCE(cd.address1||'\\n','') ||COALESCE(address2||'\\n','') ||COALESCE(city1||'\\n','')||COALESCE(state.state,'')||'-'||COALESCE(postalcode) as ad--address\r\n\t\t,CASE WHEN((CASE WHEN(cm.tea is not null) then 1 else 0 end + CASE WHEN(cm.mango is not null) then 1 else 0 end + CASE WHEN(cm.seeds is not null) then 1 else 0 end) > 0) then true else false end as ic--iscrop\r\n\t\t,CASE WHEN(cm.tea is not null) then 'Tea,' else '' end || CASE WHEN(cm.mango is not null) then 'Mango,' else '' end || CASE WHEN(cm.seeds is not null) then 'Seeds' else '' end as crop\r\n\t\t,t.lat\r\n\t\t,t.lng\r\n\t\t,cm.zoneid as zi\r\n\t\t,cd.subregionid as sri\r\n\t\t,cd.salesofficeid as  di--depotid\r\n\t\t,cd.salesdistrictid as sdi\r\n\t\t,COALESCE(tsr.sales,0.00) as s\r\n\t\t,CASE WHEN(cm.abpvalue>0) then (tsr.sales*100)/cm.abpvalue else 100  end as sp\r\n\t\t,COALESCE(tsr.salesreturn,0.00) as sr\r\n\t\t,100 as srp\r\n\t\t,COALESCE(cm.creditlimit,0.00) as cl\r\n\t\t,CASE WHEN(cm.creditlimit > 0) then (tar.outstanding * 100) / cm.creditlimit else 100 end as clp\r\n\t\t,COALESCE(tcr.collection,0.00) as col\r\n\t\t,COALESCE(tar.outstanding,0.00) as o\r\n\t\t,COALESCE(tdso.averagedays,0) as a\r\n\t\t,cd.regiondescriptionid as si\r\n\t\t,COALESCE(cm.abpvalue,0.00) as abp\r\n\t\t,COALESCE(tar.outstandingafter120,0.00) as oa120\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblcustomerdetail as cd on cd.cid=cm.id\r\n\t\tleft join tblstate as state on state.id= cd.regiondescriptionid\r\n\t\tleft join tbllookupvalues as cc on cc.lookupvalueid = cm.customercategoryid\r\n\t\tleft join tbllookupvalues as ct on ct.lookupvalueid = cm.customertypeid\r\n\t\tleft join tbllookupvalues as category on category.lookupvalueid = cm.categoryid\r\n\t\tleft join temp_tblsalesreport as tsr on tsr.customercodeid = cm.id\r\n\t\tleft join temp_tblcollectionreport as tcr on tcr.customercodeid = cm.id\r\n\t\tleft join temp_tblagingreport as tar on tar.customercodeid = cm.id\r\n\t\tleft join temp_tbldsoreport as tdso on tdso.customercodeid = cm.id\r\n\t\tleft join (\r\n\t\tselect \r\n\t\trow_number() over(partition by customerid order by id desc) as no\r\n\t\t,customerid\r\n\t\t,lat\r\n\t\t,lng\r\n\t\tfrom tblcustomerlatlong  ) as t on t.no=1 and t.customerid = cm.id\r\n\t\t) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 107 at SQL statement","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 06:58:09 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= operator does not exist: boolean || boolean
+Error Desc:= message error: operator does not exist: boolean || boolean
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":4510,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"432","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcm.id\r\n\t\t,cm.customercode as cc\r\n\t\t,cm.customercreateddate as ccd\r\n\t\t,CASE WHEN((gstpan::int + legalstatus::int + legaldepartment::int + creditorder::int + legalcaseother::int + balanceconfirm::int + chequereturn::int + inactivecustomer::int + specialcase::int + caseremark::int) > 0 ) \r\n\t\t\tthen true \r\n\t\t\tWHEN((COALESCE(tar.outstandingafter120,0.00) > 0) || ((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0))\r\n\t\t\tthen true\r\n\t\t\telse false \r\n\t\t\tend as ib\r\n\t\t,CASE WHEN(gstpan = 1::bit) then 'GST/PAN,' else '' end \r\n\t\t|| CASE WHEN(legalstatus = 1::bit) then 'Legal Status,' else '' end \r\n\t\t|| CASE WHEN(legaldepartment = 1::bit) then 'Legal Department,'  else '' end \r\n\t\t|| CASE WHEN(creditorder = 1::bit) then 'Credit-Order Block,' else '' end\r\n\t\t|| CASE WHEN(legalcaseother = 1::bit) then 'Legal Case to Other Company,'  else '' end \r\n\t\t|| CASE WHEN(balanceconfirm = 1::bit) then 'Balance Confirmation,'  else '' end \r\n\t\t|| CASE WHEN(chequereturn = 1::bit) then 'Cheque Return,'  else '' end \r\n\t\t|| CASE WHEN(inactivecustomer = 1::bit) then 'Inactive Customer,'  else '' end\r\n\t\t|| CASE WHEN(specialcase = 1::bit) then 'Special Case,'  else '' end \r\n\t\t|| CASE WHEN(caseremark = 1::bit) then 'Sp. Case Remark,'  else '' end \r\n\t\t|| CASE WHEN(COALESCE(tar.outstandingafter120,0.00) > 0) then 'Outstanding Overdue as per Payment Terms,'  else '' end \r\n\t\t|| CASE WHEN((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0) then 'CREDIT LIMIT EXCEEDS , PLEASE MAKE INVOICE BELOW RS.'||COALESCE(cm.creditlimit,0.00)::text||','  else '' end as br\r\n\t\t,cm.customername as cn\r\n\t\t,cd.city1 as c\r\n\t\t,cd.mobileno as mn\r\n\t\t--,cm.customercategoryid as cci\r\n\t\t,cc.lookupvalue as  ccat -- customercatagory\r\n\t\t--,cm.customertypeid as cti\r\n\t\t,ct.lookupvalue as ct-- customertype\r\n\t\t,category.lookupvalue as cat--category\r\n\t\t--,cm.categoryid\tas ci\r\n\t\t,COALESCE(cd.address1||'\\n','') ||COALESCE(address2||'\\n','') ||COALESCE(city1||'\\n','')||COALESCE(state.state,'')||'-'||COALESCE(postalcode) as ad--address\r\n\t\t,CASE WHEN((CASE WHEN(cm.tea is not null) then 1 else 0 end + CASE WHEN(cm.mango is not null) then 1 else 0 end + CASE WHEN(cm.seeds is not null) then 1 else 0 end) > 0) then true else false end as ic--iscrop\r\n\t\t,CASE WHEN(cm.tea is not null) then 'Tea,' else '' end || CASE WHEN(cm.mango is not null) then 'Mango,' else '' end || CASE WHEN(cm.seeds is not null) then 'Seeds' else '' end as crop\r\n\t\t,t.lat\r\n\t\t,t.lng\r\n\t\t,cm.zoneid as zi\r\n\t\t,cd.subregionid as sri\r\n\t\t,cd.salesofficeid as  di--depotid\r\n\t\t,cd.salesdistrictid as sdi\r\n\t\t,COALESCE(tsr.sales,0.00) as s\r\n\t\t,CASE WHEN(cm.abpvalue>0) then (tsr.sales*100)/cm.abpvalue else 100  end as sp\r\n\t\t,COALESCE(tsr.salesreturn,0.00) as sr\r\n\t\t,100 as srp\r\n\t\t,COALESCE(cm.creditlimit,0.00) as cl\r\n\t\t,CASE WHEN(cm.creditlimit > 0) then (tar.outstanding * 100) / cm.creditlimit else 100 end as clp\r\n\t\t,COALESCE(tcr.collection,0.00) as col\r\n\t\t,COALESCE(tar.outstanding,0.00) as o\r\n\t\t,COALESCE(tdso.averagedays,0) as a\r\n\t\t,cd.regiondescriptionid as si\r\n\t\t,COALESCE(cm.abpvalue,0.00) as abp\r\n\t\t,COALESCE(tar.outstandingafter120,0.00) as oa120\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblcustomerdetail as cd on cd.cid=cm.id\r\n\t\tleft join tblstate as state on state.id= cd.regiondescriptionid\r\n\t\tleft join tbllookupvalues as cc on cc.lookupvalueid = cm.customercategoryid\r\n\t\tleft join tbllookupvalues as ct on ct.lookupvalueid = cm.customertypeid\r\n\t\tleft join tbllookupvalues as category on category.lookupvalueid = cm.categoryid\r\n\t\tleft join temp_tblsalesreport as tsr on tsr.customercodeid = cm.id\r\n\t\tleft join temp_tblcollectionreport as tcr on tcr.customercodeid = cm.id\r\n\t\tleft join temp_tblagingreport as tar on tar.customercodeid = cm.id\r\n\t\tleft join temp_tbldsoreport as tdso on tdso.customercodeid = cm.id\r\n\t\tleft join (\r\n\t\tselect \r\n\t\trow_number() over(partition by customerid order by id desc) as no\r\n\t\t,customerid\r\n\t\t,lat\r\n\t\t,lng\r\n\t\tfrom tblcustomerlatlong  ) as t on t.no=1 and t.customerid = cm.id\r\n\t\t) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 107 at SQL statement","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 06:58:09 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= operator does not exist: boolean || boolean
+Error Desc:= message error: operator does not exist: boolean || boolean
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":4510,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"432","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcm.id\r\n\t\t,cm.customercode as cc\r\n\t\t,cm.customercreateddate as ccd\r\n\t\t,CASE WHEN((gstpan::int + legalstatus::int + legaldepartment::int + creditorder::int + legalcaseother::int + balanceconfirm::int + chequereturn::int + inactivecustomer::int + specialcase::int + caseremark::int) > 0 ) \r\n\t\t\tthen true \r\n\t\t\tWHEN((COALESCE(tar.outstandingafter120,0.00) > 0) || ((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0))\r\n\t\t\tthen true\r\n\t\t\telse false \r\n\t\t\tend as ib\r\n\t\t,CASE WHEN(gstpan = 1::bit) then 'GST/PAN,' else '' end \r\n\t\t|| CASE WHEN(legalstatus = 1::bit) then 'Legal Status,' else '' end \r\n\t\t|| CASE WHEN(legaldepartment = 1::bit) then 'Legal Department,'  else '' end \r\n\t\t|| CASE WHEN(creditorder = 1::bit) then 'Credit-Order Block,' else '' end\r\n\t\t|| CASE WHEN(legalcaseother = 1::bit) then 'Legal Case to Other Company,'  else '' end \r\n\t\t|| CASE WHEN(balanceconfirm = 1::bit) then 'Balance Confirmation,'  else '' end \r\n\t\t|| CASE WHEN(chequereturn = 1::bit) then 'Cheque Return,'  else '' end \r\n\t\t|| CASE WHEN(inactivecustomer = 1::bit) then 'Inactive Customer,'  else '' end\r\n\t\t|| CASE WHEN(specialcase = 1::bit) then 'Special Case,'  else '' end \r\n\t\t|| CASE WHEN(caseremark = 1::bit) then 'Sp. Case Remark,'  else '' end \r\n\t\t|| CASE WHEN(COALESCE(tar.outstandingafter120,0.00) > 0) then 'Outstanding Overdue as per Payment Terms,'  else '' end \r\n\t\t|| CASE WHEN((COALESCE(cm.creditlimit,0.00) - COALESCE(tar.outstanding,0.00)) < 0) then 'CREDIT LIMIT EXCEEDS , PLEASE MAKE INVOICE BELOW RS.'||COALESCE(cm.creditlimit,0.00)::text||','  else '' end as br\r\n\t\t,cm.customername as cn\r\n\t\t,cd.city1 as c\r\n\t\t,cd.mobileno as mn\r\n\t\t--,cm.customercategoryid as cci\r\n\t\t,cc.lookupvalue as  ccat -- customercatagory\r\n\t\t--,cm.customertypeid as cti\r\n\t\t,ct.lookupvalue as ct-- customertype\r\n\t\t,category.lookupvalue as cat--category\r\n\t\t--,cm.categoryid\tas ci\r\n\t\t,COALESCE(cd.address1||'\\n','') ||COALESCE(address2||'\\n','') ||COALESCE(city1||'\\n','')||COALESCE(state.state,'')||'-'||COALESCE(postalcode) as ad--address\r\n\t\t,CASE WHEN((CASE WHEN(cm.tea is not null) then 1 else 0 end + CASE WHEN(cm.mango is not null) then 1 else 0 end + CASE WHEN(cm.seeds is not null) then 1 else 0 end) > 0) then true else false end as ic--iscrop\r\n\t\t,CASE WHEN(cm.tea is not null) then 'Tea,' else '' end || CASE WHEN(cm.mango is not null) then 'Mango,' else '' end || CASE WHEN(cm.seeds is not null) then 'Seeds' else '' end as crop\r\n\t\t,t.lat\r\n\t\t,t.lng\r\n\t\t,cm.zoneid as zi\r\n\t\t,cd.subregionid as sri\r\n\t\t,cd.salesofficeid as  di--depotid\r\n\t\t,cd.salesdistrictid as sdi\r\n\t\t,COALESCE(tsr.sales,0.00) as s\r\n\t\t,CASE WHEN(cm.abpvalue>0) then (tsr.sales*100)/cm.abpvalue else 100  end as sp\r\n\t\t,COALESCE(tsr.salesreturn,0.00) as sr\r\n\t\t,100 as srp\r\n\t\t,COALESCE(cm.creditlimit,0.00) as cl\r\n\t\t,CASE WHEN(cm.creditlimit > 0) then (tar.outstanding * 100) / cm.creditlimit else 100 end as clp\r\n\t\t,COALESCE(tcr.collection,0.00) as col\r\n\t\t,COALESCE(tar.outstanding,0.00) as o\r\n\t\t,COALESCE(tdso.averagedays,0) as a\r\n\t\t,cd.regiondescriptionid as si\r\n\t\t,COALESCE(cm.abpvalue,0.00) as abp\r\n\t\t,COALESCE(tar.outstandingafter120,0.00) as oa120\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblcustomerdetail as cd on cd.cid=cm.id\r\n\t\tleft join tblstate as state on state.id= cd.regiondescriptionid\r\n\t\tleft join tbllookupvalues as cc on cc.lookupvalueid = cm.customercategoryid\r\n\t\tleft join tbllookupvalues as ct on ct.lookupvalueid = cm.customertypeid\r\n\t\tleft join tbllookupvalues as category on category.lookupvalueid = cm.categoryid\r\n\t\tleft join temp_tblsalesreport as tsr on tsr.customercodeid = cm.id\r\n\t\tleft join temp_tblcollectionreport as tcr on tcr.customercodeid = cm.id\r\n\t\tleft join temp_tblagingreport as tar on tar.customercodeid = cm.id\r\n\t\tleft join temp_tbldsoreport as tdso on tdso.customercodeid = cm.id\r\n\t\tleft join (\r\n\t\tselect \r\n\t\trow_number() over(partition by customerid order by id desc) as no\r\n\t\t,customerid\r\n\t\t,lat\r\n\t\t,lng\r\n\t\tfrom tblcustomerlatlong  ) as t on t.no=1 and t.customerid = cm.id\r\n\t\t) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 107 at SQL statement","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"1","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Wed Nov 13 2019 09:23:21 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= C:\Pratik\SVN\GSP Admin\GSP_API\reports\ledger.pug:144:1
+    142|                                           br
+    143|                                           | #{agingreport.city}
+  > 144|                     tr.title-row
+---------^
+    145|                       th.col-xs-2 Doc Date
+    146|                       th.col-xs-2 Posting Date
+    147|                       th.col-xs-2 Doc Number
+
+Inconsistent indentation. Expecting either 18 or 24 spaces/tabs.
+Error Desc:= message Error: C:\Pratik\SVN\GSP Admin\GSP_API\reports\ledger.pug:144:1
+    142|                                           br
+    143|                                           | #{agingreport.city}
+  > 144|                     tr.title-row
+---------^
+    145|                       th.col-xs-2 Doc Date
+    146|                       th.col-xs-2 Posting Date
+    147|                       th.col-xs-2 Doc Number
+
+Inconsistent indentation. Expecting either 18 or 24 spaces/tabs.
+    at makeError (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-error\index.js:32:13)
+    at Lexer.error (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:59:15)
+    at Lexer.indent (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:1341:18)
+    at Lexer.callLexerFunction (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:1460:23)
+    at Lexer.advance (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:1499:15)
+    at Lexer.callLexerFunction (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:1460:23)
+    at Lexer.getTokens (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:1516:12)
+    at lex (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-lexer\index.js:12:42)
+    at Object.lex (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug\lib\index.js:100:27)
+    at Function.loadString [as string] (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pug-load\index.js:44:24)
+code PUG:INCONSISTENT_INDENTATION
+{"All":{"code":"PUG:INCONSISTENT_INDENTATION","msg":"Inconsistent indentation. Expecting either 18 or 24 spaces/tabs.","line":144,"column":1,"filename":"C:\\Pratik\\SVN\\GSP Admin\\GSP_API\\reports\\ledger.pug"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 10:11:34 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+Error Desc:= message Error: ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+    at Object.openSync (fs.js:440:3)
+    at Object.readFileSync (fs.js:342:35)
+    at Object.readFileSync [as convertReportToBase64] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:160:41)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\model/customerMaster.js:197:16)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\action/customerMaster.js:44:16)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:96:16
+    at Object.wrape (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:23)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:94:5
+    at Object.bearerMiddleware (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:143:17)
+code ENOENT
+{"All":{"errno":-4058,"syscall":"open","code":"ENOENT","path":".\\temp\\\\ledgeReport_5.pdf"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 10:14:05 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+Error Desc:= message Error: ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+    at Object.openSync (fs.js:440:3)
+    at Object.readFileSync (fs.js:342:35)
+    at Object.readFileSync [as convertReportToBase64] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:160:41)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\model/customerMaster.js:197:16)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\action/customerMaster.js:44:16)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:96:16
+    at Object.wrape (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:23)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:94:5
+    at Object.bearerMiddleware (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:143:17)
+code ENOENT
+{"All":{"errno":-4058,"syscall":"open","code":"ENOENT","path":".\\temp\\\\ledgeReport_5.pdf"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 10:31:02 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+Error Desc:= message Error: ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+    at Object.openSync (fs.js:440:3)
+    at Object.readFileSync (fs.js:342:35)
+    at Object.readFileSync [as convertReportToBase64] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:160:41)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\model/customerMaster.js:197:16)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\action/customerMaster.js:44:16)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:96:16
+    at Object.wrape (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:23)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:94:5
+    at Object.bearerMiddleware (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:143:17)
+code ENOENT
+{"All":{"errno":-4058,"syscall":"open","code":"ENOENT","path":".\\temp\\\\ledgeReport_5.pdf"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 10:31:13 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+Error Desc:= message Error: ENOENT: no such file or directory, open '.\temp\\ledgeReport_5.pdf'
+    at Object.openSync (fs.js:440:3)
+    at Object.readFileSync (fs.js:342:35)
+    at Object.readFileSync [as convertReportToBase64] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:160:41)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\model/customerMaster.js:197:16)
+    at Object.getLedgerReport (C:\Pratik\SVN\GSP Admin\GSP_API\action/customerMaster.js:44:16)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:96:16
+    at Object.wrape (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:23)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/customerMaster.js:94:5
+    at Object.bearerMiddleware (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:143:17)
+code ENOENT
+{"All":{"errno":-4058,"syscall":"open","code":"ENOENT","path":".\\temp\\\\ledgeReport_5.pdf"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 11:48:32 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= CASE types integer and text cannot be matched
+Error Desc:= message error: CASE types integer and text cannot be matched
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42804
+{"All":{"name":"error","length":1523,"severity":"ERROR","code":"42804","internalPosition":"288","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '999,999.99') else 0 end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '999,999.99') else 0 end as credit\r\n\t\t,TO_CHAR(abs(sum(amount) over(partition by customercode order by docdate,documentno)), '999,999.99') as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then amount else 0 end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then amount else 0 end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_coerce.c","line":"1264","routine":"select_common_type"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"13","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":120,"type":"int"}]
+
+
+==========================Wed Nov 13 2019 11:48:32 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= CASE types integer and text cannot be matched
+Error Desc:= message error: CASE types integer and text cannot be matched
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42804
+{"All":{"name":"error","length":1523,"severity":"ERROR","code":"42804","internalPosition":"288","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '999,999.99') else 0 end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '999,999.99') else 0 end as credit\r\n\t\t,TO_CHAR(abs(sum(amount) over(partition by customercode order by docdate,documentno)), '999,999.99') as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then amount else 0 end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then amount else 0 end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_coerce.c","line":"1264","routine":"select_common_type"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 11:48:43 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= CASE types integer and text cannot be matched
+Error Desc:= message error: CASE types integer and text cannot be matched
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42804
+{"All":{"name":"error","length":1500,"severity":"ERROR","code":"42804","internalPosition":"288","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '999,999.99') else 0 end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '999,999.99') else 0 end as credit\r\n\t\t,abs(sum(amount) over(partition by customercode order by docdate,documentno)) as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then amount else 0 end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then amount else 0 end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_coerce.c","line":"1264","routine":"select_common_type"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"13","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":120,"type":"int"}]
+
+
+==========================Wed Nov 13 2019 11:48:43 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= CASE types integer and text cannot be matched
+Error Desc:= message error: CASE types integer and text cannot be matched
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42804
+{"All":{"name":"error","length":1500,"severity":"ERROR","code":"42804","internalPosition":"288","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '999,999.99') else 0 end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '999,999.99') else 0 end as credit\r\n\t\t,abs(sum(amount) over(partition by customercode order by docdate,documentno)) as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then amount else 0 end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then amount else 0 end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_coerce.c","line":"1264","routine":"select_common_type"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Nov 13 2019 11:54:07 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function sum(text) does not exist
+Error Desc:= message error: function sum(text) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":1665,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","internalPosition":"778","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '9,99,999.99') else '0' end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '9,99,999.99') else '0' end as credit\r\n\t\t,TO_CHAR(abs(sum(amount) over(partition by customercode order by docdate,documentno)), '9,99,999.99') as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '9,99,999.99') else '0' end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then TO_CHAR(amount, '9,99,999.99') else '0' end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"mode","value":"13","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":14,"type":"int"}]
+
+
+==========================Wed Nov 13 2019 11:54:07 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function sum(text) does not exist
+Error Desc:= message error: function sum(text) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":1665,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","internalPosition":"778","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcustomercodeid\r\n\t\t,customercode\r\n\t\t--,assignment\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,to_char(postingdate,'dd/MM/yyyy') as postingdate\r\n\t\t,documentno\r\n\t\t,doctype\r\n\t\t,CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '9,99,999.99') else '0' end as debit\r\n\t\t,CASE WHEN(debitcredit = 'H') then TO_CHAR(abs(amount), '9,99,999.99') else '0' end as credit\r\n\t\t,TO_CHAR(abs(sum(amount) over(partition by customercode order by docdate,documentno)), '9,99,999.99') as balance\r\n\t\t,narration\r\n\t\t--,CASE WHEN(debitcredit = 'S') then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,CASE WHEN((sum(amount) over(partition by customercode order by docdate,documentno)) > 0) then 'Dr' else 'Cr' end as debitcredit\r\n\t\t,sum(CASE WHEN(debitcredit = 'S') then TO_CHAR(amount, '9,99,999.99') else '0' end) over(partition by customercode)  as closingdebit\r\n\t\t,-(sum(CASE WHEN(debitcredit = 'H') then TO_CHAR(amount, '9,99,999.99') else '0' end) over(partition by customercode))  as closingcredit\r\n\t\t,sum(amount) over(partition by customercode)  as closingbalance\r\n\t\tfrom tbllegderreport \r\n\t\twhere docdate::date between (select startdate from getfinancialdate()) and  now()::date-1 and customercodeid = p_customerid\r\n\t\t order by tbllegderreport.docdate) as kk","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 750 at SQL statement","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

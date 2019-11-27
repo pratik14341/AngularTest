@@ -1,0 +1,324 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        <button title="Back" id="btnJobBack" (click)="List()" class="btn back_btn">
+            <img src="/src/app/images/icons/back_header_icon.png" />
+        </button>
+        {{Heading}}
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" [hidden]="isPreview" title="Save" (click)="Save()"
+            *hasrights="['userlogin','write']">
+            <img src="/src/app/images/icons/save_icon.png">
+        </button>
+        <button class="btn btn_icon" [hidden]="!isPreview" title="Edit" (click)="Edit()"
+            *hasrights="['userlogin','write']">
+            <img src="/src/app/images/icons/edit_header_icon.png">
+        </button>
+    </div>
+</div>
+
+<div class="col-sm-12 no_tab_content entryform">
+    <form #UserLoginEntryform="ngForm" novalidate>
+        <div class="group_box">
+            <div class="label_header">
+                <p><i class="fa fa-address-card" aria-hidden="true"></i> Basic Data</p>
+            </div>
+
+            <div class="col-md-12 padding_box">
+                <div class="col-md-6 pad_cut">
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>User Name<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.username}}</label>
+                        <kendo-maskedtextbox [mask]="'000 000 0000'" [(ngModel)]='Result.username' name='username'
+                            #username="ngModel" [hidden]="isPreview" (focusout)="CheckExistsValidation()" placeholder="Username" required
+                            (input)="onUserNameBlur()">
+                        </kendo-maskedtextbox>
+                        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="errormsg">
+                            <span *ngIf="username.errors.required">
+                                Please enter valid user name
+                            </span>
+                            <span *ngIf="username.errors.inExists">
+                                Username already exists
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Employee Code<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.employeecode}}</label>
+                        <input type="text" name="employeecode" [hidden]="isPreview" #employeecode="ngModel"
+                            [(ngModel)]="Result.employeecode" (focusout)="CheckExistsValidation()" maxlength="20" required class="fm_control">
+                        <!-- <span class="errormsg"
+                            *ngIf="employeecode.invalid  && (employeecode.dirty  || employeecode.touched) ">
+                            Employee code is required
+                        </span> -->
+                        <div *ngIf="employeecode.invalid && (employeecode.dirty || employeecode.touched)" class="errormsg">
+                            <span *ngIf="employeecode.errors.required">
+                                Please enter valid user name
+                            </span>
+                            <span *ngIf="employeecode.errors.inExists">
+                                Employee code already exists
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>User Type<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.usertype}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #usertypeid="ngModel" required
+                            [(ngModel)]="Result.usertypeid" (ngModelChange)="ChangeUserType($event)" name="usertypeid">
+                            <option value="">Select User Type</option>
+                            <option [value]="type.v" *ngFor="let type of UserType">{{type.t}}</option>
+                        </select>
+                        <span class="errormsg"
+                            *ngIf="usertypeid.invalid  && (usertypeid.dirty  || usertypeid.touched) ">
+                            User Type is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Sub - User Type<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.subusertype}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #subusertypeid="ngModel" required
+                            [(ngModel)]="Result.subusertypeid" name="subusertypeid">
+                            <option value="">Select Sub - User Type</option>
+                            <option [value]="type.v" *ngFor="let type of SubUserTypeList">{{type.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg"
+                            *ngIf="subusertypeid.invalid  && (subusertypeid.dirty  || subusertypeid.touched) ">
+                            Sub - User Type is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Display Name<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.displayname}}</label>
+                        <input type="text" name="displayname" [hidden]="isPreview" #displayname="ngModel"
+                            [(ngModel)]="Result.displayname" maxlength="100" required class="fm_control">
+                        <span class="errormsg"
+                            *ngIf="displayname.invalid  && (displayname.dirty  || displayname.touched) ">
+                            display name is required
+                        </span>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Address 1<em [hidden]="UserTypeName === 'SDO/MDO' || UserTypeName === 'External Users' || UserTypeName === 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.address1}}</label>
+                        <input type="text" name="address1" [hidden]="isPreview" #address1="ngModel"
+                            [(ngModel)]="Result.address1" maxlength="100" [required]="UserTypeName !== 'SDO/MDO' && UserTypeName !== 'External Users' && UserTypeName !== 'C&F'" class="fm_control">
+                        <span class="errormsg" *ngIf="address1.invalid  && (address1.dirty  || address1.touched) ">
+                            Address 1 is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Address 2<em [hidden]="UserTypeName === 'SDO/MDO' || UserTypeName === 'External Users' || UserTypeName === 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.address2}}</label>
+                        <input type="text" name="address2" [hidden]="isPreview" #address2="ngModel"
+                            [(ngModel)]="Result.address2" maxlength="100" [required]="UserTypeName !== 'SDO/MDO' && UserTypeName !== 'External Users' && UserTypeName !== 'C&F'" class="fm_control">
+                        <span class="errormsg" *ngIf="address2.invalid  && (address2.dirty  || address2.touched) ">
+                            Address 2 is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Pin Code<em [hidden]="UserTypeName === 'SDO/MDO' || UserTypeName === 'External Users' || UserTypeName === 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.pincode}}</label>
+                        <input type="text" name="pincode" OnlyNumber="true" minlength="6" maxlength="6"
+                            [hidden]="isPreview" #pincode="ngModel" [(ngModel)]="Result.pincode" [required]="UserTypeName !== 'SDO/MDO' && UserTypeName !== 'External Users' && UserTypeName !== 'C&F'" class="fm_control">
+                        <span class="errormsg" *ngIf="pincode.invalid  && (pincode.dirty  || pincode.touched) ">
+                            Please enter valid pin code
+                        </span>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Gender<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.gender}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #genderid="ngModel" required
+                            [(ngModel)]="Result.genderid" name="genderid">
+                            <option value="">Select Gender</option>
+                            <option [value]="gender.v" *ngFor="let gender of GenderList">{{gender.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg" *ngIf="genderid.invalid  && (genderid.dirty  || genderid.touched) ">
+                            Gender is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 pad_cut">
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Designation<em [hidden]="UserTypeName === 'SDO/MDO' || UserTypeName === 'External Users' || UserTypeName === 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.designation}}</label>
+                        <input type="text" name="designation" [hidden]="isPreview" #designation="ngModel"
+                            [(ngModel)]="Result.designation" maxlength="100" [required]="UserTypeName !== 'SDO/MDO' && UserTypeName !== 'External Users' && UserTypeName !== 'C&F'" class="fm_control">
+                        <span class="errormsg"
+                            *ngIf="designation.invalid  && (designation.dirty  || designation.touched) ">
+                            Designation is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Email<em [hidden]="UserTypeName == 'SDO/MDO'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.email}}</label>
+                        <input type="text" name="email" maxlength="50" [hidden]="isPreview" #email="ngModel" [(ngModel)]="Result.email"
+                            [required]="UserTypeName !== 'SDO/MDO'" (focusout)="CheckExistsValidation()" validateEmail class="fm_control">
+                        <div class="errormsg" *ngIf="email.invalid && (email.dirty || email.touched)">
+                            <span *ngIf="email.errors.required">
+                                Email is required
+                            </span>
+                            <span *ngIf="email.errors.validateEmail">
+                                Please enter valid email
+                            </span>
+                            <span *ngIf="email.errors.inExists">
+                                Email already exists
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Date of Birth<em [hidden]="UserTypeName === 'SDO/MDO' || UserTypeName === 'External Users' || UserTypeName === 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles"
+                            [hidden]="!isPreview">{{ Result.dob | kendoDate: 'dd/MM/yyyy' }}</label>
+                        <!-- <input type="text" name="dob" [hidden]="isPreview" #dob="ngModel"
+                                    [(ngModel)]="Result.dob" required class="fm_control"> -->
+                        <kendo-datepicker name="dob" [required]="UserTypeName !== 'SDO/MDO' && UserTypeName !== 'External Users' && UserTypeName !== 'C&F'" [hidden]="isPreview"
+                            [format]="'dd/MM/yyyy'" [(ngModel)]="Result.dob" #dob="ngModel"></kendo-datepicker>
+
+                        <span class="errormsg" *ngIf="dob.invalid  && (dob.dirty  || dob.touched) ">
+                            Date of Birth is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Sales Code<em [hidden]="UserTypeName != 'Sales' && UserTypeName != 'Marketing' && UserTypeName !== 'C&F'">*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.salescode}}</label>
+                        <input type="text" name="salescode" maxlength="20" [hidden]="isPreview" #salescode="ngModel"
+                            [(ngModel)]="Result.salescode" [required]="!(UserTypeName != 'Sales' && UserTypeName != 'Marketing' && UserTypeName !== 'C&F')" class="fm_control">
+                        <span class="errormsg" *ngIf="salescode.invalid  && (salescode.dirty  || salescode.touched) ">
+                            Sales Code is required
+                        </span>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Grade<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.grade}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #gradeid="ngModel" required
+                            [(ngModel)]="Result.gradeid" name="gradeid">
+                            <option value="">Select Grade</option>
+                            <option [value]="Grade.v" *ngFor="let Grade of GradeList">{{Grade.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg" *ngIf="gradeid.invalid  && (gradeid.dirty  || gradeid.touched) ">
+                            Grade is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Head Quarter<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.headquarter}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #headquarterid="ngModel" required
+                            [(ngModel)]="Result.headquarterid" name="headquarterid">
+                            <option value="">Select Head Quarter</option>
+                            <option [value]="HeadQuarter.v" *ngFor="let HeadQuarter of HeadQuarterList">
+                                {{HeadQuarter.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg"
+                            *ngIf="headquarterid.invalid  && (headquarterid.dirty  || headquarterid.touched) ">
+                            Head Quarter is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Vehicle<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.vehicle}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #vehicleid="ngModel" required
+                            [(ngModel)]="Result.vehicleid" name="vehicleid">
+                            <option value="">Select Vehicle</option>
+                            <option [value]="Vehicle.v" *ngFor="let Vehicle of VehicleList">{{Vehicle.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg" *ngIf="vehicleid.invalid  && (vehicleid.dirty  || vehicleid.touched) ">
+                            Vehicle is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Role<em>*</em></label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <label class="previewcontroles" [hidden]="!isPreview">{{Result.role}}</label>
+                        <select class="fm_control" [hidden]="isPreview" #roleid="ngModel" required
+                            [(ngModel)]="Result.roleid" name="roleid">
+                            <option value="">Select role</option>
+                            <option [value]="roles.v" *ngFor="let roles of RoleList">{{roles.t}}
+                            </option>
+                        </select>
+                        <span class="errormsg" *ngIf="roleid.invalid  && (roleid.dirty  || roleid.touched) ">
+                            Role is required
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-5 col-sm-12 label_col">
+                        <label>Send SMS</label>
+                    </div>
+                    <div class="col-md-7 col-sm-12 control_col">
+                        <input type='checkbox' id='sendsms' name="sendsms" [(ngModel)]="Result.sendsms" [disabled]="isPreview" #sendsms="ngModel"/><label class='checkbox_label' for='sendsms'></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="control_blank"></div>
+    </form>
+</div>
+<!-- <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+    <kendo-tabstrip-tab [title]="'User Info'" [selected]="true">
+        <ng-template kendoTabContent>
+           
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'Rights'">
+        <ng-template kendoTabContent>
+
+        </ng-template>
+    </kendo-tabstrip-tab>
+</kendo-tabstrip> -->

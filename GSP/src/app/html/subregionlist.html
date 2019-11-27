@@ -1,0 +1,18 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        Sub Region
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" title="Save As Excel" (click)="SaveasExcel()" *hasrights="['subregion','write']">
+            <img src="/src/app/images/icons/export_exl_icon.png">
+        </button>
+    </div>
+</div>
+
+<div>
+    <my-grid [id]="'subregionList'" [height]="gridHeight" [url]="'/subregion/list'" [columnsConfig]="columnsConfig"
+        fileName="subregionList.xlsx" [KeyGridSelectBy]="'id'">
+        <!-- [KeyGridSelectBy]="'ProductID'" [MultiSelectGrid]="true" -->
+    </my-grid>
+
+</div>

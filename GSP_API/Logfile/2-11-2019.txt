@@ -1,0 +1,72 @@
+
+
+==========================Sat Nov 02 2019 09:26:40 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_getdropdownlist(p_mode => integer) does not exist
+Error Desc:= message error: function usp_getdropdownlist(p_mode => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":230,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_getdropdownlist
+Function name := execute
+Para := [{"name":"mode","value":4,"type":"int"}]
+
+
+==========================Sat Nov 02 2019 09:26:40 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_getdropdownlist(p_mode => integer) does not exist
+Error Desc:= message error: function usp_getdropdownlist(p_mode => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":230,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Sat Nov 02 2019 09:27:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_getdropdownlist(p_mode => integer) does not exist
+Error Desc:= message error: function usp_getdropdownlist(p_mode => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":230,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_getdropdownlist
+Function name := execute
+Para := [{"name":"mode","value":4,"type":"int"}]
+
+
+==========================Sat Nov 02 2019 09:27:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_getdropdownlist(p_mode => integer) does not exist
+Error Desc:= message error: function usp_getdropdownlist(p_mode => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42883
+{"All":{"name":"error","length":230,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

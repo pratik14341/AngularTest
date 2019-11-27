@@ -1,0 +1,242 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        <button title="Back" id="btnJobBack" (click)="List()" class="btn back_btn">
+            <img src="/src/app/images/icons/back_header_icon.png" />
+        </button>
+        {{Heading}}
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" title="Ledger Report" (click)="LedgerReport()"
+            *hasrights="['customermaster','write']">
+            <img src="/src/app/images/icons/print_icon.png">
+        </button>
+    </div>
+</div>
+
+<div class="col-sm-12 tab_page entryform">
+    <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+        <kendo-tabstrip-tab [title]="'GSP Team & Location'" [selected]="true">
+            <ng-template kendoTabContent>
+                <div class="col-sm-6 pad_cut right_space">
+                    <div class="group_box">
+                        <div class="label_header">
+                            <p><i class="fa fa-address-card" aria-hidden="true"></i> Customer Location</p>
+                        </div>
+                        <div class="control_blank"></div>
+                        <agm-map class="map_600px" [latitude]="lat" [longitude]="lng" [zoom]="8">
+                            <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng"
+                                [markerDraggable]="false">
+                            </agm-marker>
+                        </agm-map>
+                        <p>{{ResultTeam.ad}}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 pad_cut left_space">
+                    <div class="group_box">
+                        <div class="label_header">
+                            <p><i class="fa fa-address-card" aria-hidden="true"></i> GSP Team</p>
+                        </div>
+                        <div class="control_blank"></div>
+                        <div class="col-sm-12">
+                            <h3 class="form_heading">Geography</h3>
+
+                            <div class="control_blank_half"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>Territory</label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.ter}}</label>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>Region</label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.reg}}</label>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>State</label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.st}}</label>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>Zone</label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.zo}}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <h3 class="form_heading">Sales</h3>
+
+                            <div class="control_blank_half"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>GM</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.gmnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.gmm}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>ZM</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.zmnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.zmm}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>RSM</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.rsnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.rsm}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>AM</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.amnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.amm}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>TM</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.tmnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.tmm}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>SE</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.senm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.sem}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>SO</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.sonm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.som}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>SR</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.srnm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.srm}}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <h3 class="form_heading">SDO - MDO</h3>
+
+                            <div class="control_blank_half"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>SDO</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.sdonm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.sdom}}</label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-2 col-sm-12 label_col">
+                                <label>MDO</label>
+                            </div>
+                            <div class="col-md-6 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.mdonm}}</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 control_col">
+                                <label class="previewcontroles">{{ResultTeam.mdom}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Sales'">
+            <ng-template kendoTabContent>
+                <my-grid [id]="'CustomerSalesList'" [height]="gridHeight" [url]="'/customer/getcustomersaleslist'"
+                    [columnsConfig]="CustomerSalesColumnsConfig" fileName="CustomerSalesList.xlsx"
+                    [extraInput]="{customerid:customerid}" 
+                    [SubGrid]="true" 
+                    [Sub_URL]="'/customer/getinvoicesitem'"
+                    [Sub_ExtraInput]="Sub_ExtraInput"
+                    [Sub_ColumnsConfig]="CustomerSalesItemColumnsConfig"
+                    [Sub_Id]="'subCustomerSalesList'"
+                    [KeyGridSelectBy]="'invoiceno'">
+                </my-grid>
+            </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Sales Return'">
+            <ng-template kendoTabContent>
+                <my-grid [id]="'CustomerSalesReturnList'" [height]="gridHeight"
+                    [url]="'/customer/getcustomersalesreturnlist'" [columnsConfig]="CustomerSalesReturnColumnsConfig"
+                    fileName="CustomerSalesReturnList.xlsx" [extraInput]="{customerid:customerid}"
+                    [SubGrid]="true" 
+                    [Sub_URL]="'/customer/getinvoicesitem'"
+                    [Sub_ExtraInput]="Sub_ExtraInput"
+                    [Sub_ColumnsConfig]="CustomerSalesItemColumnsConfig"
+                    [Sub_Id]="'subCustomerSalesReturnList'"
+                    [KeyGridSelectBy]="'invoiceno'">
+                </my-grid>
+            </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Collection'">
+            <ng-template kendoTabContent>
+                <my-grid [id]="'CustomerCollectionList'" [height]="gridHeight"
+                    [url]="'/customer/getcustomercollectionlist'" [columnsConfig]="CustomerCollectionColumnsConfig"
+                    fileName="CustomerCollectionList.xlsx" [extraInput]="{customerid:customerid}"
+                    [KeyGridSelectBy]="'invoiceno'">
+                </my-grid>
+            </ng-template>
+        </kendo-tabstrip-tab>
+    </kendo-tabstrip>
+
+    <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="8"
+                (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
+                <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng"
+                    [opacity]="marker.alpha" [markerDraggable]="true" (markerClick)="selectMarker($event)">
+                </agm-marker>
+                <agm-rectangle [north]="max('lat')" [east]="max('lng')" [south]="min('lat')" [west]="min('lng')">
+                </agm-rectangle>
+            </agm-map>
+            <p *ngIf="selectedMarker">
+                Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
+            </p> -->
+</div>

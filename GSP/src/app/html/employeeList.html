@@ -1,0 +1,18 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        Employee
+    </p>
+    <div class="header_btns">
+
+
+    </div>
+</div>
+
+<div>
+    <div id="pi">
+        <my-grid [id]="'employeeList'" [height]="gridHeight" [url]="'/employee/employeelist'"
+            [columnsConfig]="columnsConfig" [KeyGridSelectBy]="'employeeid'">
+            <!-- [KeyGridSelectBy]="'ProductID'" [MultiSelectGrid]="true" -->
+        </my-grid>
+    </div>
+</div>

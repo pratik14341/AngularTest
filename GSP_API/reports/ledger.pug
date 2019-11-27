@@ -1,0 +1,239 @@
+//- Added by Rohan Dave on 21/09/2019(report stuff)
+
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='apple-touch-icon' sizes='57x57' href='/img/icons/apple-touch-icon-57x57.png')
+        link(rel='apple-touch-icon' sizes='60x60' href='/img/icons/apple-touch-icon-60x60.png')
+        link(rel='apple-touch-icon' sizes='72x72' href='/img/icons/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon' sizes='76x76' href='/img/icons/apple-touch-icon-76x76.png')
+        link(rel='apple-touch-icon' sizes='114x114' href='/img/icons/apple-touch-icon-114x114.png')
+        link(rel='apple-touch-icon' sizes='120x120' href='/img/icons/apple-touch-icon-120x120.png')
+        link(rel='apple-touch-icon' sizes='144x144' href='/img/icons/apple-touch-icon-144x144.png')
+        link(rel='apple-touch-icon' sizes='152x152' href='/img/icons/apple-touch-icon-152x152.png')
+        link(rel='apple-touch-icon' sizes='180x180' href='/img/icons/apple-touch-icon-180x180.png')
+        link(rel='icon' type='image/png' sizes='32x32' href='/img/icons/favicon-32x32.png')
+        link(rel='icon' type='image/png' sizes='192x192' href='/img/icons/android-chrome-192x192.png')
+        link(rel='icon' type='image/png' sizes='16x16' href='/img/icons/favicon-16x16.png')
+        link(rel='manifest' href='/img/icons/manifest.json')
+        link(rel='mask-icon' href='/img/icons/safari-pinned-tab.svg' color='#5bbad5')
+        meta(name='msapplication-TileColor' content='#da532c')
+        meta(name='msapplication-TileImage' content='/img/icon/mstile-144x144.png')
+        meta(name='theme-color' content='#ffffff')
+        title Ledger Report
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')   
+        
+        style.
+            @page {
+                size: A4;
+                margin: 4mm 10mm 4mm 10mm;
+            }
+
+            html,body {
+                height: 100%;
+            }
+
+            body.A4 .sheet {
+                height: auto;
+                min-height: 296mm;
+            }
+
+            .wrapper {
+                height: 100%;
+                display: block;
+                position: relative;
+            }
+
+            * {
+                color: #000000;
+                font-size: 12px;
+            }
+
+            span.ignore {
+                font-size: inherit;
+            }
+
+            .table > tbody > tr > td {
+                padding: 4px;
+            }
+
+            h2 {
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+
+            .table > tfoot > tr > td,
+            .table > thead > tr > th {
+              padding: 7px;
+              border-bottom: 1px solid #000000 !important;
+              border-top: 1px solid #000000 !important;
+            }
+
+            .title-row td {
+                font-weight: bold;
+            }
+
+            .footer {
+                position: inherit !important;
+            }
+
+            table { page-break-inside:auto }
+            tr    { page-break-inside:avoid; page-break-after:auto }
+            td p  { page-break-inside:avoid; page-break-after:auto }
+            thead { display:table-header-group }
+            tfoot { display:table-footer-group }
+            .closetr td { border-top: 1px solid #000000 !important; border-bottom: 1px solid #000000 !important;}
+            div.header {
+                display: block; text-align: center; 
+                position: running(header);
+            }
+            div.footer {
+                display: block; text-align: center;
+                position: running(footer);
+            }
+            @page {
+                @top-center { content: element(header) }
+            }
+            @page { 
+                @bottom-center { content: element(footer) }
+            }
+
+    body.A4
+        section.sheet.p-md
+            .row
+                .col-xs-3
+                    .col-xs-12.no-margins.no-padding-h
+                        img.img-responsive.pull-right.m-b-sm(src=logo)
+                .col-xs-5
+                    .col-xs-12.no-margins.no-padding-h                        
+                        address
+                            strong GSP Crop Science Pvt Ltd
+                            br
+                            | 404/Lalita Complex, Rasala Road,
+                            br
+                            | Navrangpura, Ahmedabad, Gujarat
+                            br
+                            br
+                            strong #{agingreport.customername} (#{agingreport.customercode})
+                            br
+                            | #{agingreport.ad}
+                            br
+                            | #{agingreport.city}
+
+                .col-xs-4.text-right
+                    .col-xs-12.no-margins.no-padding-h
+                        strong Customer Account Statement
+                        br
+                        strong Period: #{agingreport.period}
+                        br
+                        strong Date: #{agingreport.nowdate}
+            .row
+              .col-xs-12
+                table.table(style="margin-top:10px !important;")
+                  thead
+                    tr.title-row
+                      th.col-xs-2 Doc Date
+                      th.col-xs-2 Posting Date
+                      th.col-xs-2 Doc Number
+                      th.col-xs-2 Doc Type
+                      th.col-xs-1 Debit
+                      th.col-xs-1 Credit
+                      th.col-xs-1 Balance
+                      th.col-xs-1 Dr/Cr
+                  tbody
+                    for item in legderreport
+                      tr
+                        if item.narration == 'OPENING BALANCE'
+                          td.col-xs-2
+                          td.col-xs-2(colspan=2)
+                            strong OPENING BALANCE
+                        else 
+                          td.col-xs-2 #{item.docdate}
+                          td.col-xs-2 #{item.postingdate}
+                          td.col-xs-2 #{item.documentno}
+                        td.col-xs-2 #{item.doctype}
+                        td.col-xs-1 #{item.debit}
+                        td.col-xs-1 #{item.credit}
+                        td.col-xs-1 #{item.balance}
+                        td.col-xs-1 #{item.debitcredit}
+                      //- tr
+                      //-   td.col-xs-2
+                      //-     if jobVisit.supplierCompanyId
+                      //-       | #{jobVisit.SupplierCompany.name}
+                      //-     else if jobVisit.userAssigneeId
+                      //-       | #{jobVisit.UserAssignee.fullName}
+                      //-     else
+                      //-       | ''
+                      //-   td.col-xs-2 03-06-2019
+                      //-   td.col-xs-2 0140005626
+                      //-   td.col-xs-2 PMT
+                      //-   td.col-xs-1 10,568.00
+                      //-   td.col-xs-1 0.00
+                      //-   td.col-xs-1 9,633.29
+                      //-   td.col-xs-1 Dr
+                    //-tfoot
+                    tr.closetr
+                      td.col-xs-2
+                      //- td.col-xs-2 
+                      td.col-xs-2(colspan=2)
+                        strong CLOSING BALANCE
+                      td.col-xs-2
+                      td.col-xs-1 #{legderreport[0].closingdebit}
+                      td.col-xs-1 #{legderreport[0].closingcredit}
+                      td.col-xs-1 #{legderreport[0].closingbalance}
+                      td.col-xs-1 Dr
+
+
+            .row
+              .col-xs-12
+                .col-xs-12(style="padding:0px !important;")
+                  table.table.table-bordered
+                    tr
+                      th.col-xs-1 Total O/S
+                      th.col-xs-1 Unadjusted Dr/Cr
+                      th.col-xs-1 0-30 Days
+                      th.col-xs-1 31-60 Days
+                      th.col-xs-1 61-90 Days
+                      th.col-xs-1 91-120 Days
+                      th.col-xs-1 121-150 Days
+                      th.col-xs-1 151-180 Days
+                      th.col-xs-1 More than 180 Days
+                    tr
+                      td.col-xs-1 #{agingreport.allinclusiveamt}
+                      td.col-xs-1 #{agingreport.unadjustedcredit}
+                      td.col-xs-1 #{agingreport.outstanding1}
+                      td.col-xs-1 #{agingreport.outstanding2}
+                      td.col-xs-1 #{agingreport.outstanding3}
+                      td.col-xs-1 #{agingreport.outstanding4}
+                      td.col-xs-1 #{agingreport.outstanding5}
+                      td.col-xs-1 #{agingreport.outstanding7}
+                      td.col-xs-1 #{agingreport.outstanding8}
+            .row
+              .col-xs-12
+                .col-xs-12(style="padding:0px !important;")
+                  table.table.table-bordered
+                    tr
+                      th.col-xs-1 Disclaimer :
+                    tr
+                      td.col-xs-1 This ledger report is for informational purposes only and cannot be used as a legal document in a court of law.
+
+            //- .row
+            //-   .col-xs-12
+            //-     .col-xs-3 Id
+            //-     .col-xs-3 Product Image
+            //-     .col-xs-3 Name
+            //-     .col-xs-3 Amount
+            //- for item in jobVisit.items
+            //-   .row
+            //-     .col-xs-12
+            //-       .col-xs-3 
+            //-         | #{item.id}
+            //-       .col-xs-3
+            //-         img.img-responsive(src=`${item.imgUrl}`,style="width:100px;")
+            //-       .col-xs-3
+            //-         | #{item.name}
+            //-       .col-xs-3
+            //-         | Rs. #{_str.numberFormat(item.price*1,2)}

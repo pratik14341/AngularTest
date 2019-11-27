@@ -1,0 +1,119 @@
+
+
+==========================Thu Oct 03 2019 11:24:11 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:26:42)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at executefunction (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:104:29)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:96:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"4","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","type":"int"}]
+
+
+==========================Thu Oct 03 2019 11:24:12 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:26:42)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at executefunction (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:104:29)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:96:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"4","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","type":"int"}]
+
+
+==========================Thu Oct 03 2019 11:28:00 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:26:42)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at executefunction (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:104:29)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:96:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"4","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","type":"int"}]
+
+
+==========================Thu Oct 03 2019 11:28:01 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:26:42)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at executefunction (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:104:29)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:96:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"4","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","type":"int"}]
+
+
+==========================Thu Oct 03 2019 11:29:26 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:26:42)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at executefunction (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:104:29)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:96:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"4","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","type":"int"}]
+
+
+==========================Thu Oct 03 2019 11:53:40 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column "p_customerid" does not exist
+Error Desc:= message error: column "p_customerid" does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42703
+{"All":{"name":"error","length":760,"severity":"ERROR","code":"42703","internalPosition":"337","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select count(1) OVER () AS counts, \r\n\t\tinvoiceno\r\n\t\t\t,invoicedate\r\n\t\t\t,paytermsdesc\r\n\t\t\t,sum(qtycase) as qtycase\r\n\t\t\t,sum(cgstamt + sgstamt + igstamt) as gstamout\r\n\t\t\t,sum(finaltaxablevalue + cgstamt + sgstamt + igstamt) as invoicevalue\r\n\t\t\tfrom tblsalesreport as sr\r\n\t\t\twhere customercodeid = p_customerid  and type = 'ZIDO' and  1 = 1 \r\n\t\t\t group by invoiceno,invoicedate,paytermsdesc  ORDER BY paytermsdesc asc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 533 at EXECUTE","file":"parse_relation.c","line":"3194","routine":"errorMissingColumn"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"paytermsdesc asc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"10","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":14,"type":"int"}]

@@ -1,0 +1,19 @@
+
+
+==========================Sat Oct 05 2019 05:50:57 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= function o_char(timestamp without time zone, unknown) does not exist
+Error Desc:= message error: function o_char(timestamp without time zone, unknown) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42883
+{"All":{"name":"error","length":747,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","internalPosition":"256","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select  count(1) OVER () AS counts, \r\n\t\tamountinlc\r\n\t\t,bankdatatext\r\n\t\t,to_char(docdate,'dd/MM/yyyy') as docdate\r\n\t\t,referenceutrno\r\n\t\t,customercodeid\r\n\t\tfrom tblcollectionreport where customercodeid = 67 and   ( o_char(docdate,'dd/MM/yyyy')  = '22/08/2019' ) ORDER BY 1 desc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 567 at EXECUTE","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":"  ( o_char(docdate,'dd/MM/yyyy')  = '22/08/2019' )","type":"string"},{"name":"mode","value":"12","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":67,"type":"int"}]

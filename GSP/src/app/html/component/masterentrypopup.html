@@ -1,0 +1,35 @@
+<kendo-dialog title="GSP" *ngIf="dialogOpened" (close)="closemodel()" [height]="500" [minWidth]="250" [width]="450">
+    <div class="col-md-7 pad_cut">
+        <form #masterentryform="ngForm" novalidate>
+            <div class="col-md-4 col-sm-12 label_col">
+                <label class="tit-name-r left"><span id="PopupDisplayName">{{DisplayNameField}}</span> <em
+                        style="color: #EE001C; margin: 10px 3px 0 0; font-size: .9em;">*</em></label>
+            </div>
+            <div class="col-md-8 col-sm-12 control_col cont_additem">
+                <label class="previewcontroles" title="{{NameValue}}" [hidden]="!IsPreview">{{NameValue}}</label>
+                <input type="text" name="name" [hidden]="IsPreview" #name="ngModel" [(ngModel)]="NameValue" required
+                    class="fm_control">
+                <span class="errormsg" *ngIf="name.invalid  && (name.dirty  || name.touched) ">
+                    Please enter {{DisplayNameField}}.
+                </span>
+                <div class="errormsg1 errormsg" *ngIf="IsShowValidateNameValueE" id="ValidateNameValueE">
+                    {{ValidateNameValueE}}</div>
+                <button title="Clear" value="Clear" id="btnClear" name="btnClear" (click)="Clear()"
+                    class='btn btn_icon'><img src="/src/app/images/icons/clear_icon.png"></button>
+
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5 btn_align_right">
+        <input type="button" value="Save" id="btnSave" name="btnSave" (click)="Save()" [hidden]="IsPreview"
+            class='btn btn_form'>
+        <input type="button" value="Edit" id="btnEdit" name="btnEdit" (click)="Edit()" [hidden]="!IsPreview"
+            class='btn btn_form'>
+        <input type="button" value="Close" id="btnCancel" name="btnCancel" (click)="closemodel()" class='btn btn_form'>
+    </div>
+    <div class="control_blank_quarter"></div>
+    <my-grid [id]="'userloginList'" [height]="400" [url]=url [extraInput]=extraInput [columnsConfig]=columnsConfig
+        [loadOninit]="true" (RowChange)="RowChange($event)" fileName="userlogin.xlsx" [KeyGridSelectBy]="'id'">
+    </my-grid>
+    <div class="control_blank_quarter"></div>
+</kendo-dialog>

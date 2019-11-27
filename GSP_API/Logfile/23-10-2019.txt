@@ -1,0 +1,198 @@
+
+
+==========================Wed Oct 23 2019 08:52:22 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'userId' of undefined
+Error Desc:= message TypeError: Cannot read property 'userId' of undefined
+    at Object.userId [as rolePermissionsInsert] (C:\Pratik\SVN\GSP Admin\GSP_API\model/role.js:18:36)
+    at Object.rolePermissionsInsert (C:\Pratik\SVN\GSP Admin\GSP_API\action/role.js:8:32)
+    at rolePermissionsInsert (C:\Pratik\SVN\GSP Admin\GSP_API\services/role.js:33:33)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:41:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/role.js:30:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:36:51 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= crypto is not defined
+Error Desc:= message ReferenceError: crypto is not defined
+    at crypto (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:11:22)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:41:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:10:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-compose\index.js:42:32)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:39:19 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= flgmobile is not defined
+Error Desc:= message ReferenceError: flgmobile is not defined
+    at Object.flgmobile (C:\Pratik\SVN\GSP Admin\GSP_API\model/login.js:21:32)
+    at Object.userLogin [as userMobileLogin] (C:\Pratik\SVN\GSP Admin\GSP_API\action/login.js:39:41)
+    at userMobileLogin (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:34:38)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:41:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:26:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:39:20 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= flgmobile is not defined
+Error Desc:= message ReferenceError: flgmobile is not defined
+    at Object.flgmobile (C:\Pratik\SVN\GSP Admin\GSP_API\model/login.js:21:32)
+    at Object.userLogin [as userMobileLogin] (C:\Pratik\SVN\GSP Admin\GSP_API\action/login.js:39:41)
+    at userMobileLogin (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:34:38)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:41:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/login.js:26:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:39:49 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= crypto is not defined
+Error Desc:= message ReferenceError: crypto is not defined
+    at Object.userId [as getUserMobileRights] (C:\Pratik\SVN\GSP Admin\GSP_API\model/userSetting.js:95:13)
+    at Object.getUserMobileRights (C:\Pratik\SVN\GSP Admin\GSP_API\action/userSetting.js:20:39)
+    at Object.getUserMobileRights [as userMobileLogin] (C:\Pratik\SVN\GSP Admin\GSP_API\action/login.js:49:45)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:42:28 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= mobilemenu is not defined
+Error Desc:= message ReferenceError: mobilemenu is not defined
+    at Object.mobilemenu [as getUserMobileRights] (C:\Pratik\SVN\GSP Admin\GSP_API\model/userSetting.js:101:13)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 11:43:55 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column "c4" does not exist
+Error Desc:= message error: column "c4" does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42703
+{"All":{"name":"error","length":102,"severity":"ERROR","code":"42703","position":"45","file":"parse_relation.c","line":"3194","routine":"errorMissingColumn"}}
+Store Proc := tfn_returnuserrightstable
+Function name := execute
+Para := [{"name":"userid","value":"c4","type":"int"}]
+
+
+==========================Wed Oct 23 2019 11:43:55 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column "c4" does not exist
+Error Desc:= message error: column "c4" does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42703
+{"All":{"name":"error","length":102,"severity":"ERROR","code":"42703","position":"45","file":"parse_relation.c","line":"3194","routine":"errorMissingColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 12:54:37 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= crypto is not defined
+Error Desc:= message ReferenceError: crypto is not defined
+    at Object.userId [as forgotSendOTP] (C:\Pratik\SVN\GSP Admin\GSP_API\action/forgot.js:10:13)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 12:55:15 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= sms is not defined
+Error Desc:= message ReferenceError: sms is not defined
+    at Object.forgotSendOTP (C:\Pratik\SVN\GSP Admin\GSP_API\action/forgot.js:12:26)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 12:56:21 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'userid' of undefined
+Error Desc:= message TypeError: Cannot read property 'userid' of undefined
+    at Object.userid [as forgotChangePassword] (C:\Pratik\SVN\GSP Admin\GSP_API\action/forgot.js:66:20)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Wed Oct 23 2019 12:58:04 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'userid' of undefined
+Error Desc:= message TypeError: Cannot read property 'userid' of undefined
+    at Object.userid [as forgotChangePassword] (C:\Pratik\SVN\GSP Admin\GSP_API\action/forgot.js:67:20)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""

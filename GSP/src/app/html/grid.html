@@ -1,0 +1,39 @@
+<kendo-grid gridBinding [columnMenu]="true" [height]="height" [id]="id" [url]="BASE_URL" [extraInput]="extraInput"
+    [masterDataItems]="masterDataItems" [masterkey]="masterkey" [kendoGridSelectBy]="KeyGridSelectBy"
+    [selectedKeys]="mySelection" [mySelection]="mySelection" [loadOninit]="loadOninit"
+    (dataBound)="callDataBound($event)" (clearSelection)="clearSelectedValue($event)"
+    (setSelection)="setSelectedValue($event)" (selectionChange)="selectedRowChange($event)">
+    <kendo-grid-column *ngFor="let col of columnsConfig" [field]="col.field" [title]="col.title" [locked]="col.locked" [width]="col._width"
+        [filter]="col.filter" [filterable]="col.filterable" [hidden]="col.hidden" [format]="col.format" [class]="col.class" [headerClass]="col.headerClass" [footerClass]="col.footerClass"
+        [sortable]="col.sortable">
+        <ng-template *ngIf="col.filter == 'date'" kendoGridFilterCellTemplate let-filter let-column="column">
+            <kendo-grid-date-filter-cell operator="eq" [column]="column" [filter]="filter">
+            </kendo-grid-date-filter-cell>
+        </ng-template>
+
+        <ng-template kendoGridFooterTemplate let-column *ngIf="col.isfooter">
+            {{col.footerValue}}
+            <!-- let-columnIndex="columnIndex" -->
+        </ng-template>
+        <ng-template kendoGridCellTemplate let-dataItem *ngIf="col.isLinkButton || col.isButton || col.isDiv ||
+            col.isImageButton">
+            <a *ngIf="col.isLinkButton" (click)="col.callBackfunction(dataItem)">{{dataItem[col.field]}}</a>
+            <a *ngIf="col.isImageButton" class='btn btn_icon' (click)="col.callBackfunction(dataItem)"
+                [title]=col.imageTitle(dataItem)> <img [src]="col.src(dataItem)" /></a>
+            <div *ngIf="col.isDiv" [ngClass]="col.class(dataItem[col.field])">{{dataItem[col.field]}}</div>
+            <!--  -->
+        </ng-template>
+
+    </kendo-grid-column>
+    <ng-container *ngIf="SubGrid">
+        <div *kendoGridDetailTemplate="let dataItem">
+            <my-grid [id]="Sub_Id" [height]="200" [url]="Sub_URL" [extraInput]="Sub_ExtraInput(dataItem)"
+                [columnsConfig]="Sub_ColumnsConfig" [loadOninit]="true">
+            </my-grid>
+        </div>
+    </ng-container>
+    <!-- <kendo-grid-pdf fileName="Employee.pdf" [allPages]="true" paperSize="A4" [repeatHeaders]="true" [landscape]="true"> </kendo-grid-pdf> -->
+    <!-- <kendo-grid-excel fileName="Employee.xlsx" [fetchData]="allData"
+        [filterable]="true"></kendo-grid-excel> -->
+    <kendo-grid-excel [fileName]="fileName" [fetchData]="allData" [filterable]="true"></kendo-grid-excel>
+</kendo-grid>

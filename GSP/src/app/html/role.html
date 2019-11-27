@@ -1,0 +1,126 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        User Management > Role
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" [hidden]="isPreview" title="Save" (click)="SaveRoleDetail()"
+            *hasrights="['role','write']">
+            <img src="/src/app/images/icons/save_icon.png">
+        </button>
+    </div>
+</div>
+
+
+<div class="col-sm-12 no_tab_content entryform">
+    <form #RoleEntryform="ngForm" novalidate>
+        <div class="col-md-12 pad_cut">
+            <div class="col-md-4 pad_cut">
+                <div class="col-md-5 col-sm-12 label_col">
+                    <label>Role<em>*</em></label>
+                </div>
+                <div class="col-md-7 col-sm-12 control_col cont_additem">
+                    <select class="fm_control" (ngModelChange)="ChangeRole($event)" #roleid="ngModel" required
+                        [(ngModel)]="Result.roleid" name="roleid">
+                        <option value="">Select Role</option>
+                        <option [value]="role.v" *ngFor="let role of RoleList">{{role.t}}
+                        </option>
+                    </select>
+                    <input type="button" *hasrights="['role','write']" value="+" (click)="callRolepopup()"
+                            class='btn_plus'>
+                    <span class="errormsg" *ngIf="roleid.invalid  && (roleid.dirty  || roleid.touched) ">
+                        role is required
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <div class="big_search">
+                <input type="text" id="txtSearch" placeholder="Search..." class="form-control searchfilter"
+                    [(ngModel)]="Searchsdisplayname" />
+                <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 pad_cut tab_scroll user_role" id="accordion">
+        <ng-container *ngFor="let userright of RoleRights | grdFilter: {displayname : Searchsdisplayname}">
+            <div class="panel panel-default collapseall" id="mainmenu{{userright.moduleid}}"
+                *ngIf="userright.moduleparentid==userright.moduleid">
+                <div class="panel-heading parentrights">
+                    <h4 class="panel-title">
+                        <a class="toggleCls" (click)="ExpandCollapse($event)" name="{{userright.moduleid}}" href="#">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i><i class="fa fa-minus-circle"
+                                aria-hidden="true"></i>{{userright.displayname}}
+                        </a>
+                        <input type="checkbox" id="chk{{userright.moduleid}}" [(ngModel)]="userright.isread"
+                            class="k-checkbox pull-right">
+                        <label class="k-checkbox-label pull-right" for="chk{{userright.moduleid}}">Visible</label>
+                    </h4>
+                </div>
+                <div id="collapseOne{{userright.moduleid}}" class="tab_content collapseuserrights collapseall">
+                    <div class="table-responsive">
+                        <div class="big_search">
+                            <input type="text" id="{{userright.moduleid}}" placeholder="Search..."
+                                class="form-control searchfilter" [(ngModel)]="userright.serchdisplayname" />
+                            <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
+                        </div>
+                        <table class="table table-striped table-bordered" id="tblsub{{userright.moduleid}}">
+                            <tbody>
+                                <ng-container
+                                    *ngFor="let childuserright of RoleRights| grdFilter: {displayname : userright.serchdisplayname}">
+                                    <tr
+                                        *ngIf="childuserright.moduleparentid!=0 && childuserright.moduleparentid==userright.moduleid && childuserright.moduleparentid!=childuserright.moduleid">
+                                        <td class="childrights cell_xl">
+                                            {{childuserright.displayname}}
+                                        </td>
+                                        <td class="cell_m">
+                                            <input type="checkbox"
+                                                id="chkread{{childuserright.keyname}}{{childuserright.moduleid}}" (change)="CheckRightsClick($event,childuserright)"
+                                                [(ngModel)]="childuserright.isread" class="k-checkbox">
+                                            <label class="k-checkbox-label"
+                                                for="chkread{{childuserright.keyname}}{{childuserright.moduleid}}">Read</label>
+                                        </td>
+                                        <td class="cell_m">
+                                            <input type="checkbox" class="k-checkbox"
+                                                [(ngModel)]="childuserright.iswrite" (change)="CheckRightsClick($event,childuserright)"
+                                                id="chkwrite{{childuserright.keyname}}{{childuserright.moduleid}}">
+                                            <label class="k-checkbox-label"
+                                                for="chkwrite{{childuserright.keyname}}{{childuserright.moduleid}}">Write</label>
+                                        </td>
+                                        <td class="cell_m">
+                                            <input type="checkbox"
+                                                id="chkdelete{{childuserright.keyname}}{{childuserright.moduleid}}" (change)="CheckRightsClick($event,childuserright)"
+                                                class="k-checkbox" [(ngModel)]="childuserright.isdelete">
+                                            <label class="k-checkbox-label"
+                                                for="chkdelete{{childuserright.keyname}}{{childuserright.moduleid}}">Delete</label>
+                                        </td>
+                                        <td class="cell_m">
+                                            <input type="checkbox"
+                                                id="chkreport{{childuserright.keyname}}{{childuserright.moduleid}}" (change)="CheckRightsClick($event,childuserright)"
+                                                [(ngModel)]="childuserright.isreport" class="k-checkbox">
+                                            <label class="k-checkbox-label"
+                                                for="chkreport{{childuserright.keyname}}{{childuserright.moduleid}}">Report</label>
+                                        </td>
+                                        <td class="chkall cell_m">
+                                            <input type="checkbox"
+                                                id="chkall{{childuserright.keyname}}{{childuserright.moduleid}}"
+                                                [(ngModel)]="childuserright.isall" (change)="CheckRightsClick($event,childuserright)" class="k-checkbox">
+                                            <label class="k-checkbox-label"
+                                                for="chkall{{childuserright.keyname}}{{childuserright.moduleid}}">All</label>
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<my-dialogs [dialogOpened]=roleDialogOpened [columnsConfig]=columnsConfig [DisplayNameField]="'Name'"
+    [url]="'/masterentry/list'" [extraInput]="{keyname:'role'}" (close)=close()></my-dialogs>

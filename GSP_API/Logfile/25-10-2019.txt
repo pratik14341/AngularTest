@@ -1,0 +1,38 @@
+
+
+==========================Fri Oct 25 2019 07:41:16 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column reference "id" is ambiguous
+Error Desc:= message error: column reference "id" is ambiguous
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42702
+{"All":{"name":"error","length":1100,"severity":"ERROR","code":"42702","internalPosition":"13","internalQuery":"(\r\n\t\tselect id \r\n\t\tfrom tblcustomermaster as cm\r\n\t\tinner join tblcustomerdetail as cd on cd.cid = cm.id\r\n\t\twhere cd.inactivecustomer = 0::bit\r\n\t\t)","where":"PL/pgSQL function getcustomerrights(integer) line 45 at RETURN QUERY\nSQL statement \"insert into temp_tblsalesreport(customercodeid,sales,salesreturn)\r\n\t\tselect\r\n\t\tsr.customercodeid\r\n\t\t,sum(sr.finaltaxablevalue) as sales\r\n\t\t,sum(CASE WHEN(sr.type = 'ZIRE' or sr.type = 'S2') then sr.finaltaxablevalue else 0 end)  as salesreturn\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblsalesreport as sr on sr.customercodeid = cm.id\r\n\t\twhere --cm.id = COALESCE(p_customerid,cm.id) and\r\n\t\t invoicedate between (select startdate from getfinancialdate()) and  (select enddate from getfinancialdate())\r\n\t\t group by sr.customercodeid\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 473 at SQL statement","file":"parse_relation.c","line":"670","routine":"scanRTEForColumn"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"cc asc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"8","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Fri Oct 25 2019 07:41:16 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column reference "id" is ambiguous
+Error Desc:= message error: column reference "id" is ambiguous
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42702
+{"All":{"name":"error","length":1100,"severity":"ERROR","code":"42702","internalPosition":"13","internalQuery":"(\r\n\t\tselect id \r\n\t\tfrom tblcustomermaster as cm\r\n\t\tinner join tblcustomerdetail as cd on cd.cid = cm.id\r\n\t\twhere cd.inactivecustomer = 0::bit\r\n\t\t)","where":"PL/pgSQL function getcustomerrights(integer) line 45 at RETURN QUERY\nSQL statement \"insert into temp_tblsalesreport(customercodeid,sales,salesreturn)\r\n\t\tselect\r\n\t\tsr.customercodeid\r\n\t\t,sum(sr.finaltaxablevalue) as sales\r\n\t\t,sum(CASE WHEN(sr.type = 'ZIRE' or sr.type = 'S2') then sr.finaltaxablevalue else 0 end)  as salesreturn\r\n\t\tfrom getcustomerrights(p_userid) as gcr\r\n\t\tinner join tblcustomermaster as cm on gcr.customerid = cm.id\r\n\t\tinner join tblsalesreport as sr on sr.customercodeid = cm.id\r\n\t\twhere --cm.id = COALESCE(p_customerid,cm.id) and\r\n\t\t invoicedate between (select startdate from getfinancialdate()) and  (select enddate from getfinancialdate())\r\n\t\t group by sr.customercodeid\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 473 at SQL statement","file":"parse_relation.c","line":"670","routine":"scanRTEForColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

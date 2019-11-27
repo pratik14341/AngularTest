@@ -1,0 +1,7 @@
+<kendo-dialog title={{title}} *ngIf="dialogOpened" (close)="closemodel(false)" [minWidth]="250" [width]="450">
+    <p style="margin: 30px; text-align: center;">{{message}}</p>
+    <kendo-dialog-actions>
+        <button kendoButton (click)="closemodel(false)">No</button>
+        <button kendoButton (click)="closemodel(true)" primary="true">Yes</button>
+    </kendo-dialog-actions>
+</kendo-dialog>

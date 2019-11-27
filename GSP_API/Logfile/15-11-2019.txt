@@ -1,0 +1,94 @@
+
+
+==========================Fri Nov 15 2019 06:50:26 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_planandvisitcrud(p_mode => integer, p_userid => integer) is not unique
+Error Desc:= message error: function usp_planandvisitcrud(p_mode => integer, p_userid => integer) is not unique
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42725
+{"All":{"name":"error","length":240,"severity":"ERROR","code":"42725","hint":"Could not choose a best candidate function. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"501","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_planandvisitcrud
+Function name := execute
+Para := [{"name":"mode","value":2,"type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Fri Nov 15 2019 06:50:26 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= function usp_planandvisitcrud(p_mode => integer, p_userid => integer) is not unique
+Error Desc:= message error: function usp_planandvisitcrud(p_mode => integer, p_userid => integer) is not unique
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42725
+{"All":{"name":"error","length":240,"severity":"ERROR","code":"42725","hint":"Could not choose a best candidate function. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"501","routine":"ParseFuncOrColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Fri Nov 15 2019 11:08:04 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= _ is not defined
+Error Desc:= message ReferenceError: _ is not defined
+    at Object._ [as getCustomerPlanedList] (C:\Pratik\SVN\GSP Admin\GSP_API\model/planAndVisit.js:11:20)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at Object.getCustomerPlanedList (C:\Pratik\SVN\GSP Admin\GSP_API\action/planAndVisit.js:5:16)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/planAndVisit.js:9:16
+    at Object.wrape (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:42:23)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\services/planAndVisit.js:7:5
+    at Object.bearerMiddleware (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:143:17)
+    at C:\Pratik\SVN\GSP Admin\GSP_API/app.js:17:4
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Fri Nov 15 2019 12:10:04 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= value.orderBy is not a function
+Error Desc:= message TypeError: value.orderBy is not a function
+    at orderBy (C:\Pratik\SVN\GSP Admin\GSP_API\model/orderManagement.js:18:94)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:3543:27
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:4905:15
+    at baseForOwn (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:2990:24)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:4874:18
+    at baseMap (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:3542:7)
+    at Function.map (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:9554:14)
+    at interceptor (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:16997:35)
+    at Function.thru (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:8795:14)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:4368:28
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Fri Nov 15 2019 12:13:30 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= The comparison function must be either a function or undefined
+Error Desc:= message TypeError: The comparison function must be either a function or undefined
+    at Array.sort (<anonymous>)
+    at sort (C:\Pratik\SVN\GSP Admin\GSP_API\model/orderManagement.js:18:94)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:3543:27
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:4905:15
+    at baseForOwn (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:2990:24)
+    at C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:4874:18
+    at baseMap (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:3542:7)
+    at Function.map (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:9554:14)
+    at interceptor (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:16997:35)
+    at Function.thru (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\lodash\lodash.js:8795:14)
+code 
+{"All":{}}
+Store Proc := 
+Function name := executefunction
+Para := ""

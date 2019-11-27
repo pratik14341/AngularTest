@@ -1,0 +1,72 @@
+
+
+==========================Mon Nov 25 2019 04:38:06 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= could not extend file "base/1579638/t4_2091417": No space left on device
+Error Desc:= message error: could not extend file "base/1579638/t4_2091417": No space left on device
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 53100
+{"All":{"name":"error","length":479,"severity":"ERROR","code":"53100","hint":"Check free disk space.","where":"SQL statement \"CREATE TEMPORARY TABLE temp_tblsalesreport(\r\n\t\t\tid SERIAL PRIMARY KEY,\r\n\t\t\tcustomercodeid int DEFAULT null,\r\n\t\t\tsales numeric(18,3),\r\n\t\t\tsalesreturn numeric(18,3)\r\n\t\t\t)\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 481 at SQL statement","file":"md.c","line":"548","routine":"mdextend"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"cc asc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"8","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Mon Nov 25 2019 04:38:06 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= could not extend file "base/1579638/t4_2091417": No space left on device
+Error Desc:= message error: could not extend file "base/1579638/t4_2091417": No space left on device
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 53100
+{"All":{"name":"error","length":479,"severity":"ERROR","code":"53100","hint":"Check free disk space.","where":"SQL statement \"CREATE TEMPORARY TABLE temp_tblsalesreport(\r\n\t\t\tid SERIAL PRIMARY KEY,\r\n\t\t\tcustomercodeid int DEFAULT null,\r\n\t\t\tsales numeric(18,3),\r\n\t\t\tsalesreturn numeric(18,3)\r\n\t\t\t)\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 481 at SQL statement","file":"md.c","line":"548","routine":"mdextend"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 25 2019 04:38:53 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= could not extend file "base/1579638/t4_2091419": No space left on device
+Error Desc:= message error: could not extend file "base/1579638/t4_2091419": No space left on device
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 53100
+{"All":{"name":"error","length":479,"severity":"ERROR","code":"53100","hint":"Check free disk space.","where":"SQL statement \"CREATE TEMPORARY TABLE temp_tblsalesreport(\r\n\t\t\tid SERIAL PRIMARY KEY,\r\n\t\t\tcustomercodeid int DEFAULT null,\r\n\t\t\tsales numeric(18,3),\r\n\t\t\tsalesreturn numeric(18,3)\r\n\t\t\t)\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 481 at SQL statement","file":"md.c","line":"548","routine":"mdextend"}}
+Store Proc := usp_tblcustomermaster
+Function name := execute
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"cc asc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"8","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Mon Nov 25 2019 04:38:53 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= could not extend file "base/1579638/t4_2091419": No space left on device
+Error Desc:= message error: could not extend file "base/1579638/t4_2091419": No space left on device
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 53100
+{"All":{"name":"error","length":479,"severity":"ERROR","code":"53100","hint":"Check free disk space.","where":"SQL statement \"CREATE TEMPORARY TABLE temp_tblsalesreport(\r\n\t\t\tid SERIAL PRIMARY KEY,\r\n\t\t\tcustomercodeid int DEFAULT null,\r\n\t\t\tsales numeric(18,3),\r\n\t\t\tsalesreturn numeric(18,3)\r\n\t\t\t)\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 481 at SQL statement","file":"md.c","line":"548","routine":"mdextend"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

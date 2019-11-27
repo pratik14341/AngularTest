@@ -1,0 +1,105 @@
+<div (click)="SaveasPDF()">Save As PDF</div>
+<div (click)="SaveasExcel()">Save As Excel</div>
+<div (click)="Refresgrid()">Refresh</div>
+<div (click)="SaveState()" *hasrights="['employee','write']">Save State</div>
+<button (click)="getSelectedValue()" *hasrights="['employee','write']">Fetch
+    Selection Value</button>
+<button (click)="clearSelectedValue()" *hasrights="['employee','write']">Clear
+    Selection Value</button>
+<button (click)="setSelectedValue()" *hasrights="['employee','write']">set
+    Selection Value</button>
+
+
+<my-grid [id]="'smpList'" [height]="400" [url]="'/employee/employeelist'" [extraInput]="{'Year':i }"
+    [columnsConfig]="columnsConfig" (dataBound)="callDataBound($event)" [KeyGridSelectBy]="'ProductID'"
+    [MultiSelectGrid]="true">
+    <!-- [KeyGridSelectBy]="'ProductID'" [MultiSelectGrid]="true" -->
+</my-grid>
+
+
+
+
+<kendo-grid gridBinding [columnMenu]="true" [height]="250" [id]="'smpList2'" [url]="'/employee/employeelist'"
+    [extraInput]="{'Year':i }" [loadOninit]="true">
+    <kendo-grid-column *ngFor="let col of columnsConfig" [field]="col.field" [title]="col.title" [width]="col._width"
+        [filter]="col.filter" [filterable]="col.filterable" [hidden]="col.hidden" [format]="col.format"
+        [sortable]="col.sortable">
+
+
+        <ng-template kendoGridCellTemplate let-dataItem *ngIf="col.isLinkButton
+            || col.isButton || col.isImageButton || col.isDiv">
+            <a *ngIf="col.isLinkButton" (click)="col.callBackfunction(dataItem)">{{dataItem[col.field]}}</a>
+            <a *ngIf="col.isImageButton" class='img_btn btn' (click)="col.callBackfunction(dataItem)"
+                [title]='col.imageTitle'> <img [src]='col.src' /></a>
+        </ng-template>
+
+        <div *kendoGridDetailTemplate="let dataItem">
+            <my-grid [id]="'smpListd'" [height]="200" [url]="'/employee/employeelist'" [extraInput]="{'Year':i }"
+                [columnsConfig]="columnsConfig" [masterDataItems]="dataItem" [masterkey]="'ProductID'"
+                [loadOninit]="true">
+            </my-grid>
+
+
+            <!--  https://www.telerik.com/kendo-angular-ui/components/grid/advanced-features/hierarchy/  -->
+        </div>
+    </kendo-grid-column>
+
+    <kendo-grid-pdf fileName="Employee.pdf" [allPages]="true" paperSize="A4" [repeatHeaders]="true" [landscape]="true">
+    </kendo-grid-pdf>
+
+    <kendo-grid-excel fileName="Employee.xlsx" [filterable]="true"></kendo-grid-excel>
+</kendo-grid>
+
+
+
+
+
+<!-- (selectionChange)="selectedRowChange($event)"  [fetchData]="allResults"-->
+<!-- <kendo-grid gridBinding [columnMenu]="true" [height]="270" [id]="'smpList'"
+    [url]="'/employee/employeelist'" [extraInput]="{'Year':i }" >
+    <kendo-grid-column *ngFor="let col of columnsConfig"
+        [field]="col.field" [title]="col.title" [width]="col._width"
+        [filter]="col.filter"
+        [filterable]="col.filterable" [hidden]="col.hidden"
+        [format]="col.format" 
+        [sortable]="col.sortable">
+
+
+        <ng-container *ngIf="col.isLinkButton || col.isButton || col.isImageButton">
+            <ng-template kendoGridCellTemplate let-dataItem>
+                <a *ngIf="col.isLinkButton" (click)="col.callBackfunction(dataItem)">{{dataItem[col.field]}}</a>
+                 <a *ngIf="col.isImageButton" class='img_btn btn'  (click)="col.callBackfunction(dataItem)"
+                   [title]='col.imageTitle'>  <img [src]='col.src' /></a>
+
+            </ng-template>
+        </ng-container>
+        <div *kendoGridDetailTemplate="let dataItem">
+                <category-details [category]="dataItem"></category-details>
+            </div>
+    </kendo-grid-column>
+
+    <kendo-grid-pdf fileName="Employee.pdf" [allPages]="true"
+        paperSize="A4" [repeatHeaders]="true" [landscape]="true">
+    </kendo-grid-pdf>
+
+    <kendo-grid-excel fileName="Employee.xlsx" [fetchData]="allResults" 
+        [filterable]="true"></kendo-grid-excel>
+</kendo-grid> -->
+<!-- 
+<kendo-grid gridBinding [height]="270" [id]="'lsmpList'"
+    [url]="'/employee/employeelist'">
+    <kendo-grid-column field="ProductID" width="200"></kendo-grid-column>
+    <kendo-grid-column field="ProductName" width="200"></kendo-grid-column>
+    <kendo-grid-column field="QuantityPerUnit" width="500" [sortable]="false">
+    </kendo-grid-column>
+</kendo-grid> -->
+<!-- <kendo-grid #employeeList id='employeeList' [data]="empservice | async" [pageSize]="empservice.pageSize" [skip]="empservice.skips"
+[filter]="empservice.filters"  [sortable]="true"  filterable="row" [filterable]="true"
+ [sortable]="{ mode: 'multiple'}"
+ [sort]="empservice.sorts" [pageable]="true"  [columnMenu]="true" >
+    <kendo-grid-column field="ProductID" width="200"></kendo-grid-column>
+    <kendo-grid-column field="ProductName" width="200"></kendo-grid-column>
+    <kendo-grid-column field="QuantityPerUnit" width="500" [sortable]="false"> </kendo-grid-column>
+    <kendo-grid-pdf fileName="Employee.pdf"  paperSize="A4" >  </kendo-grid-pdf>
+    <kendo-grid-excel fileName="Employee.xlsx"></kendo-grid-excel>
+</kendo-grid> -->

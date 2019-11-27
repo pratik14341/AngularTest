@@ -1,0 +1,35 @@
+{
+  "name": "gspapi",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "SET NODE_ENV=test && nodemon --exec babel-node app.js",
+    "prodbuild" : "dist --copy-files"
+  },
+  "dependencies": {
+    "cryptr": "^4.0.2",
+    "dateformat": "^3.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-cors": "0.0.16",
+    "koa-pug": "^4.0.2",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15",
+    "nodemailer": "^6.3.0",
+    "pg": "^7.12.0",
+    "pug": "^2.0.4",
+    "underscore.string": "^3.3.5",
+    "wkhtmltopdf": "^0.3.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "nodemon": "^1.19.2"
+  },
+  "description": "GSP API",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,38 @@
+
+
+==========================Fri Oct 04 2019 14:55:04 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= aggregate functions are not allowed in WHERE
+Error Desc:= message error: aggregate functions are not allowed in WHERE
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42803
+{"All":{"name":"error","length":824,"severity":"ERROR","code":"42803","internalPosition":"410","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select count(1) OVER () AS counts, \r\n\t\tinvoiceno\r\n\t\t\t,to_char(invoicedate,'dd/MM/yyyy') as invoicedate\r\n\t\t\t,paytermsdesc\r\n\t\t\t,sum(qtycase) as qtycase\r\n\t\t\t,sum(cgstamt + sgstamt + igstamt) as gstamout\r\n\t\t\t,sum(finaltaxablevalue + cgstamt + sgstamt + igstamt) as invoicevalue\r\n\t\t\tfrom tblsalesreport as sr\r\n\t\t\twhere customercodeid =14  and type = 'ZIDO' and   (  lower(sum(qtycase))  like  '%16%' )\r\n\t\t\t group by invoiceno,invoicedate,paytermsdesc  ORDER BY 1 desc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 533 at EXECUTE","file":"parse_agg.c","line":"533","routine":"check_agglevels_and_constraints"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":"  (  lower(sum(qtycase))  like  '%16%' )","type":"string"},{"name":"mode","value":"10","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":14,"type":"int"}]
+
+
+==========================Fri Oct 04 2019 14:55:55 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= aggregate functions are not allowed in WHERE
+Error Desc:= message error: aggregate functions are not allowed in WHERE
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42803
+{"All":{"name":"error","length":810,"severity":"ERROR","code":"42803","internalPosition":"403","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select count(1) OVER () AS counts, \r\n\t\tinvoiceno\r\n\t\t\t,to_char(invoicedate,'dd/MM/yyyy') as invoicedate\r\n\t\t\t,paytermsdesc\r\n\t\t\t,sum(qtycase) as qtycase\r\n\t\t\t,sum(cgstamt + sgstamt + igstamt) as gstamout\r\n\t\t\t,sum(finaltaxablevalue + cgstamt + sgstamt + igstamt) as invoicevalue\r\n\t\t\tfrom tblsalesreport as sr\r\n\t\t\twhere customercodeid =14  and type = 'ZIDO' and   ( sum(qtycase)  = '16' )\r\n\t\t\t group by invoiceno,invoicedate,paytermsdesc  ORDER BY 1 desc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 533 at EXECUTE","file":"parse_agg.c","line":"533","routine":"check_agglevels_and_constraints"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":"  ( sum(qtycase)  = '16' )","type":"string"},{"name":"mode","value":"10","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":14,"type":"int"}]

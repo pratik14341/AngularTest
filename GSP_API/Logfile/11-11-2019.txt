@@ -1,0 +1,216 @@
+
+
+==========================Mon Nov 11 2019 05:16:15 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":[{"customerid":1,"cashdiscount":50,"grandtotal":40,"gst":10}],"type":"json"},{"name":"json2","value":[{"materialmasterid":1,"quantity":2}],"type":"json"}]
+
+
+==========================Mon Nov 11 2019 05:16:15 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 11 2019 05:17:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":[{"customerid":1,"cashdiscount":50,"grandtotal":40,"gst":10}],"type":"json"},{"name":"json2","value":[{"materialmasterid":1,"quantity":2},{"materialmasterid":2,"quantity":2}],"type":"json"}]
+
+
+==========================Mon Nov 11 2019 05:17:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 11 2019 05:27:59 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":[{"customerid":1,"cashdiscount":50,"grandtotal":40,"gst":10}],"type":"json"},{"name":"json2","value":[{"materialmasterid":1,"quantity":2},{"materialmasterid":2,"quantity":2}],"type":"json"}]
+
+
+==========================Mon Nov 11 2019 05:27:59 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 11 2019 05:30:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":[{"customerid":1,"cashdiscount":50,"grandtotal":40,"gst":10}],"type":"json"},{"name":"json2","value":[{"materialmasterid":1,"quantity":2},{"materialmasterid":2,"quantity":2}],"type":"json"}]
+
+
+==========================Mon Nov 11 2019 05:30:27 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= syntax error at or near "["
+Error Desc:= message error: syntax error at or near "["
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42601
+{"All":{"name":"error","length":90,"severity":"ERROR","code":"42601","position":"46","file":"scan.l","line":"1087","routine":"scanner_yyerror"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 11 2019 09:18:18 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= cannot call json_to_recordset on a scalar
+Error Desc:= message error: cannot call json_to_recordset on a scalar
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 22023
+{"All":{"name":"error","length":506,"severity":"ERROR","code":"22023","where":"SQL statement \"insert into tblordermaster(customerid,cashdiscount,grandtotal,gst)\r\n\t\tselect\r\n\t\tcustomerid,cashdiscount,grandtotal,gst\r\n\t\tfrom json_to_recordset(p_json) as td(\r\n\t\tcustomerid integer,\r\n\t\tcashdiscount numeric(18,2),\r\n\t\tgrandtotal numeric(18,2),\r\n\t\tgst numeric(18,2)\r\n\t\t)\"\nPL/pgSQL function usp_tblordermaster(integer,integer,json,json,integer,integer) line 55 at SQL statement","file":"jsonfuncs.c","line":"3019","routine":"populate_recordset_scalar"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":"\"[{\\\"customerid\\\":4,\\\"cashdiscount\\\":32173.199999999997,\\\"grandtotal\\\":594775.224,\\\"gst\\\":90728.424}]\"","type":"string"},{"name":"json2","value":"\"[{\\\"materialmasterid\\\":508,\\\"quantity\\\":34},{\\\"materialmasterid\\\":487,\\\"quantity\\\":33},{\\\"materialmasterid\\\":547,\\\"quantity\\\":44}]\"","type":"string"}]
+
+
+==========================Mon Nov 11 2019 09:18:18 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= cannot call json_to_recordset on a scalar
+Error Desc:= message error: cannot call json_to_recordset on a scalar
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 22023
+{"All":{"name":"error","length":506,"severity":"ERROR","code":"22023","where":"SQL statement \"insert into tblordermaster(customerid,cashdiscount,grandtotal,gst)\r\n\t\tselect\r\n\t\tcustomerid,cashdiscount,grandtotal,gst\r\n\t\tfrom json_to_recordset(p_json) as td(\r\n\t\tcustomerid integer,\r\n\t\tcashdiscount numeric(18,2),\r\n\t\tgrandtotal numeric(18,2),\r\n\t\tgst numeric(18,2)\r\n\t\t)\"\nPL/pgSQL function usp_tblordermaster(integer,integer,json,json,integer,integer) line 55 at SQL statement","file":"jsonfuncs.c","line":"3019","routine":"populate_recordset_scalar"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Mon Nov 11 2019 09:19:19 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= cannot call json_to_recordset on a scalar
+Error Desc:= message error: cannot call json_to_recordset on a scalar
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 22023
+{"All":{"name":"error","length":488,"severity":"ERROR","code":"22023","where":"SQL statement \"insert into tblordermaster(customerid,cashdiscount,grandtotal,gst)\r\n\t\tselect\r\n\t\tcustomerid,cashdiscount,grandtotal,gst\r\n\t\tfrom json_to_recordset(p_json) as td(\r\n\t\tcustomerid integer,\r\n\t\tcashdiscount numeric,\r\n\t\tgrandtotal numeric,\r\n\t\tgst numeric\r\n\t\t)\"\nPL/pgSQL function usp_tblordermaster(integer,integer,json,json,integer,integer) line 55 at SQL statement","file":"jsonfuncs.c","line":"3019","routine":"populate_recordset_scalar"}}
+Store Proc := usp_tblordermaster
+Function name := execute
+Para := [{"name":"mode","value":"2","type":"int"},{"name":"json","value":"\"[{\\\"customerid\\\":4,\\\"cashdiscount\\\":32173.199999999997,\\\"grandtotal\\\":594775.224,\\\"gst\\\":90728.424}]\"","type":"string"},{"name":"json2","value":"\"[{\\\"materialmasterid\\\":508,\\\"quantity\\\":34},{\\\"materialmasterid\\\":487,\\\"quantity\\\":33},{\\\"materialmasterid\\\":547,\\\"quantity\\\":44}]\"","type":"string"}]
+
+
+==========================Mon Nov 11 2019 09:19:20 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= cannot call json_to_recordset on a scalar
+Error Desc:= message error: cannot call json_to_recordset on a scalar
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 22023
+{"All":{"name":"error","length":488,"severity":"ERROR","code":"22023","where":"SQL statement \"insert into tblordermaster(customerid,cashdiscount,grandtotal,gst)\r\n\t\tselect\r\n\t\tcustomerid,cashdiscount,grandtotal,gst\r\n\t\tfrom json_to_recordset(p_json) as td(\r\n\t\tcustomerid integer,\r\n\t\tcashdiscount numeric,\r\n\t\tgrandtotal numeric,\r\n\t\tgst numeric\r\n\t\t)\"\nPL/pgSQL function usp_tblordermaster(integer,integer,json,json,integer,integer) line 55 at SQL statement","file":"jsonfuncs.c","line":"3019","routine":"populate_recordset_scalar"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

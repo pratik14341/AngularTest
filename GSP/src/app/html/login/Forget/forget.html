@@ -1,0 +1,76 @@
+<form #ForgotUserform="ngForm" novalidate class="login_form">
+
+  <h2>{{title}}</h2>
+
+  <div class="app_alert" *ngIf="isError">
+    {{ErrorMessage}}
+  </div>
+
+  <div class="fm_group" *ngIf="IsShowUsername">
+      <i class="fa fa-phone" aria-hidden="true"></i>
+    <kendo-maskedtextbox class="" [mask]="'000 000 0000'" [(ngModel)]='register.username' name='username' #username="ngModel"
+      placeholder="Username" required=true (keydown.enter)="onNextMobile()"></kendo-maskedtextbox>
+    <span class="errormsg"
+      *ngIf="username.invalid  && (username.dirty  || username.touched)  && !ForgotUserform.submitted">
+      Please enter valid Username
+    </span>
+  </div>
+
+  <div class="btn_group text-right" *ngIf="IsShowUsername">
+    <button type="button" class="btn btn_green" (click)="onNextMobile()">Next</button>
+  </div>
+
+  <div class="login_footer" *ngIf="IsShowUsername">
+    <a routerLink="/login"><i class="fa fa-chevron-left"  aria-hidden="true"></i> Go Back</a>
+  </div>
+</form>
+
+<form #ForgotOTPform="ngForm" novalidate class="login_form">
+  <div class="fm_group" *ngIf="IsShowOTP">
+    <i class="fa fa-lock"></i>
+    <kendo-maskedtextbox [mask]="'0 0 0 0'" [(ngModel)]='register.OTP' name='OTP' #OTP="ngModel" placeholder="OTP"
+      required=true (keydown.enter)="onNextOTP()"></kendo-maskedtextbox>
+    <span class="errormsg" *ngIf="OTP.invalid  && (OTP.dirty  || OTP.touched) ">
+      OTP is required
+    </span>
+  </div>
+  <div class="btn_group text-right" *ngIf="IsShowOTP">
+    <button type="button" class="btn btn_green" (click)="onNextOTP()">Next</button>
+  </div>
+  <div class="login_footer" *ngIf="IsShowOTP">
+    <a (click)="onBackMobile()"><i class="fa fa-chevron-left"  aria-hidden="true"></i> Go Back</a>
+  </div>
+</form>
+
+<form #ForgotPasswordform="ngForm" novalidate class="login_form">
+
+  <div class="fm_group" *ngIf="IsShowPassword">
+    <i class="fa fa-lock"></i>
+    <input type="password" class="fm_control" placeholder="New Password" [(ngModel)]='register.newpassword'
+      name='newpassword' #newpassword="ngModel" maxlength="4" minlength="4" OnlyNumber="true" required
+      (keydown.enter)="onClick()">
+    <span class="errormsg" [hidden]="newpassword.valid || (newpassword.pristine && !ForgotPasswordform.submitted)">
+      4 digit password required
+    </span>
+  </div>
+
+  <div class="fm_group" *ngIf="IsShowPassword">
+    <i class="fa fa-lock"></i>
+    <input type="password" class="fm_control" placeholder="Confirmation Password"
+      [(ngModel)]='register.confirmationpassword' name='confirmationpassword' validateEqual="newpassword" maxlength="4"
+      minlength="4" OnlyNumber="true" #confirmationpassword="ngModel" required (keydown.enter)="onClick()">
+    <span class="errormsg"
+      [hidden]="confirmationpassword.valid ||  (confirmationpassword.pristine && !ForgotPasswordform.submitted)">
+      Password mismatch
+    </span>
+  </div>
+
+  <div class="btn_group text-right" *ngIf="IsShowPassword">
+    <button type="button" class="btn btn_green" (click)="onClick()">Submit</button>
+  </div>
+
+  <div class="login_footer" *ngIf="IsShowPassword">
+    <a (click)="onBackOTP()"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a>
+  </div>
+
+</form>

@@ -1,0 +1,439 @@
+<div class="containerbackground">
+    <!--main screen wrapper-->
+    <!--WRAPPER-->
+    <div role="tabpanel">
+        <form action="">
+            <!-- Nav tabs -->
+            <ul class="display nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist">
+                <li role="presentation" class="active">
+                    <a aria-controls="home" role="tab" data-toggle="tab">Personal information</a>
+                </li>
+                <li role="presentation">
+                    <a aria-controls="profile" role="tab" data-toggle="tab">finance details</a>
+                </li>
+                <li role="presentation">
+                    <a aria-controls="messages" role="tab" data-toggle="tab">Company details</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content bdr-container">
+                <div role="tabpanel" class="tab-pane active" id="pi">
+
+                    <div class="container flow bg-gray">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <!-- <select class="form-control">
+                                        <option>Miss.</option>
+                                        <option>Mrs.</option>
+                                    </select> -->
+                                    <select class="form-control" #selecttitle="ngModel" [(ngModel)]="Result.selecttitle"
+                                        name="selecttitle">
+                                        <option value="">Select Title</option>
+                                        <option [value]="title.v" *ngFor="let title of titles">{{title.t}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" name="firstname" #firstname="ngModel"
+                                        [(ngModel)]="Result.firstname" class="form-control error">
+                                    <p>Please select first name.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Middle Name</label>
+                                    <input type="text" name="middlename" #middlename="ngModel"
+                                        [(ngModel)]="Result.middlename" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Surname Name</label>
+                                    <input type="text" name="surname" #surname="ngModel" [(ngModel)]="Result.surname"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Start Date {{Result.startdate}}</label>
+                                    <kendo-datepicker class="form-control" [format]="'dd/MM/yyyy'"
+                                        [(value)]="Result.startdate"></kendo-datepicker>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Finish Date</label>
+                                    <kendo-datepicker class="form-control" [format]="'dd/MM/yyyy'"
+                                        [(value)]="Result.finishdate"></kendo-datepicker>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address 1</label>
+                                    <input type="text" class="form-control" name="address1" #address1="ngModel"
+                                        [(ngModel)]="Result.address1">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address 2</label>
+                                    <input type="text" class="form-control" name="address2" #address2="ngModel"
+                                        [(ngModel)]="Result.address2">
+                                </div>
+                                <div class="form-group">
+                                    <label>Address 3</label>
+                                    <input type="text" class="form-control" name="address3" #address3="ngModel"
+                                        [(ngModel)]="Result.address3">
+                                </div>
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text" class="form-control" name="city" #city="ngModel"
+                                        [(ngModel)]="Result.city">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Pincode</label>
+                                    <input type="text" class="form-control" name="pincode" #pincode="ngModel"
+                                        [(ngModel)]="Result.pincode">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+
+                                <div class="form-group">
+                                    <label>Home Tel.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Finish Date</label>
+                                    <input type="date" class="form-control
+                                        remove">
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Sex </label>
+                                            <select class="form-control">
+                                                <option></option>
+                                                <option>Femail</option>
+                                                <option>Mail</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Marital Status</label>
+                                            <select class="form-control">
+                                                <option></option>
+                                                <option>Divorced</option>
+                                                <option>Married</option>
+                                                <option>Single</option>
+                                                <option>Widow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Spouse Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Children</label>
+                                            <select class="form-control">
+                                                <option></option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>PanCard No.</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Passport No.</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Middle Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile No.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Date of Birthday</label>
+                                    <input type="date" class="form-control
+                                        remove">
+                                </div>
+                                <div class="form-group">
+                                    <label>Personal E-mail</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Driving License No.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Post Code</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-info btn-lg
+                                    entrypage-submit">SUBMIT</button>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-warning btn-lg
+                                    entrypage-reset">RESET</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="fd">
+                    <div class="container flow">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bank Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bank BranchName</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bank Account No.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-info btn-lg
+                                    entrypage-submit">SUBMIT</button>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-warning btn-lg
+                                    entrypage-reset">RESET</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="cd">
+                    <div class="container flow">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <select class="form-control">
+                                        <option>I-Path Solution</option>
+                                        <option>P.T. Shah & Co.</option>
+                                        <option>Unipath solution</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Employee Status</label>
+                                    <select class="form-control">
+                                        <option>Mss</option>
+                                        <option>EX ECS</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="remove" value="">Lunch Break</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="radio">
+                                            <label class="rpl-20 pb-10">
+                                                Work Location</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="radio">
+                                            <label>
+                                                <input class="remove" type="radio" name="optradio" checked>Home</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="radio">
+                                            <label>
+                                                <input class="remove" type="radio" name="optradio">Office</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Company E-mail</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label>End of Probation</label>
+                                    <input type="date" class="form-control
+                                        remove">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Client Email Address</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Employee Photo</label>
+                                    <input type="file" class="form-control-file
+                                        remove">
+                                </div>
+                                <div class="form-group">
+                                    <label>Driving License Copy</label>
+                                    <input type="file" class="form-control-file
+                                        remove">
+                                </div>
+                                <div class="form-group">
+                                    <label>Passport Copy</label>
+                                    <input type="file" class="form-control-file
+                                        remove">
+                                </div>
+                                <div class="form-group">
+                                    <label>CV/Application Form</label>
+                                    <input type="file" class="form-control-file
+                                        remove">
+                                </div>
+                                <div class="form-group">
+                                    <label>Pan Card Copy</label>
+                                    <input type="file" class="form-control-file
+                                        remove">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Basic</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label> HRA</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Conveyance</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="form-group">
+                                    <label>Position</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Position - 1</option>
+                                        <option>Position - 2</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Manager/TL/C.E.O</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Date goes here..!</option>
+                                        <option>Date goes here..!</option>
+                                        <option>Date goes here..!</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Department</label>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option>Software</option>
+                                        <option>Networking</option>
+                                        <option>belrock</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Retention</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>ESSL No.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="remove" value="">P.Holiday Applicable</label>
+                                </div>
+
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="remove" value="">Nor Eligible For
+                                        Professional</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-info btn-lg
+                                    entrypage-submit">SUBMIT</button>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <button class="btn btn-warning btn-lg
+                                    entrypage-reset">RESET</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--END-WRAPPER-->
+    <!--end of main screen wrapper-->
+</div>

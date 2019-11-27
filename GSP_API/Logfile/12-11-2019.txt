@@ -1,0 +1,72 @@
+
+
+==========================Tue Nov 12 2019 11:21:13 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+Error Desc:= message error: column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42803
+{"All":{"name":"error","length":789,"severity":"ERROR","code":"42803","internalPosition":"139","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\t\tselect \r\n\t\t\tid as v\r\n\t\t\t,name as t\r\n\t\t\t,spz.zoneid\r\n\t\t\t,spz.stateid\r\n\t\t\t,spz.plantid\r\n\t\t\tfrom tblsubregion as sr\r\n\t\t\tinner join tblsubregionplantzone as spz on sr.id = spz.subregionid\r\n\t\t\tinner join getuserwiseterritory(p_userid) as guwt on guwt.territoryid = spz.salesdistrictid\r\n\t\t\twhere sr.isactive = 1::bit\r\n\t\t\tgroup by id, name, spz.zoneid, spz.stateid\r\n\t\t) as kk","where":"PL/pgSQL function usp_getdropdownlist(character varying,character varying,character varying,text,character varying,integer,integer,integer,integer,text) line 70 at SQL statement","file":"parse_agg.c","line":"1344","routine":"check_ungrouped_columns_walker"}}
+Store Proc := usp_getdropdownlist
+Function name := execute
+Para := [{"name":"mode","value":4,"type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Tue Nov 12 2019 11:21:13 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+Error Desc:= message error: column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42803
+{"All":{"name":"error","length":789,"severity":"ERROR","code":"42803","internalPosition":"139","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\t\tselect \r\n\t\t\tid as v\r\n\t\t\t,name as t\r\n\t\t\t,spz.zoneid\r\n\t\t\t,spz.stateid\r\n\t\t\t,spz.plantid\r\n\t\t\tfrom tblsubregion as sr\r\n\t\t\tinner join tblsubregionplantzone as spz on sr.id = spz.subregionid\r\n\t\t\tinner join getuserwiseterritory(p_userid) as guwt on guwt.territoryid = spz.salesdistrictid\r\n\t\t\twhere sr.isactive = 1::bit\r\n\t\t\tgroup by id, name, spz.zoneid, spz.stateid\r\n\t\t) as kk","where":"PL/pgSQL function usp_getdropdownlist(character varying,character varying,character varying,text,character varying,integer,integer,integer,integer,text) line 70 at SQL statement","file":"parse_agg.c","line":"1344","routine":"check_ungrouped_columns_walker"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Tue Nov 12 2019 11:24:30 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+Error Desc:= message error: column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42803
+{"All":{"name":"error","length":929,"severity":"ERROR","code":"42803","internalPosition":"195","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\t\tselect \r\n\t\t\tsdm.id as v,\r\n\t\t\tsdm.name as t,\r\n\t\t\tspz.zoneid,\r\n\t\t\tspz.subregionid,\r\n\t\t\t--spz.salesdistrictid,\r\n\t\t\tspz.stateid,\r\n\t\t\tspz.plantid\r\n\t\t\tfrom tblsalesdistrictmaster as sdm\r\n\t\t\tinner join tblsubregionplantzone as spz on sdm.id = spz.salesdistrictid\r\n\t\t\tinner join getuserwiseterritory(p_userid) as guwt on guwt.territoryid = spz.salesdistrictid\r\n\t\t\twhere sdm.isactive = 1::bit\r\n\t\t\tgroup by sdm.id,\r\n\t\t\tsdm.name,\r\n\t\t\tspz.zoneid,\r\n\t\t\tspz.subregionid,\r\n\t\t\tspz.salesdistrictid,\r\n\t\t\tspz.stateid\r\n\t\t) as kk","where":"PL/pgSQL function usp_getdropdownlist(character varying,character varying,character varying,text,character varying,integer,integer,integer,integer,text) line 106 at SQL statement","file":"parse_agg.c","line":"1344","routine":"check_ungrouped_columns_walker"}}
+Store Proc := usp_getdropdownlist
+Function name := execute
+Para := [{"name":"mode","value":6,"type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Tue Nov 12 2019 11:24:30 GMT+0000 (Greenwich Mean Time)==========================
+Error Message:= column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+Error Desc:= message error: column "spz.plantid" must appear in the GROUP BY clause or be used in an aggregate function
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+code 42803
+{"All":{"name":"error","length":929,"severity":"ERROR","code":"42803","internalPosition":"195","internalQuery":"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\t\tselect \r\n\t\t\tsdm.id as v,\r\n\t\t\tsdm.name as t,\r\n\t\t\tspz.zoneid,\r\n\t\t\tspz.subregionid,\r\n\t\t\t--spz.salesdistrictid,\r\n\t\t\tspz.stateid,\r\n\t\t\tspz.plantid\r\n\t\t\tfrom tblsalesdistrictmaster as sdm\r\n\t\t\tinner join tblsubregionplantzone as spz on sdm.id = spz.salesdistrictid\r\n\t\t\tinner join getuserwiseterritory(p_userid) as guwt on guwt.territoryid = spz.salesdistrictid\r\n\t\t\twhere sdm.isactive = 1::bit\r\n\t\t\tgroup by sdm.id,\r\n\t\t\tsdm.name,\r\n\t\t\tspz.zoneid,\r\n\t\t\tspz.subregionid,\r\n\t\t\tspz.salesdistrictid,\r\n\t\t\tspz.stateid\r\n\t\t) as kk","where":"PL/pgSQL function usp_getdropdownlist(character varying,character varying,character varying,text,character varying,integer,integer,integer,integer,text) line 106 at SQL statement","file":"parse_agg.c","line":"1344","routine":"check_ungrouped_columns_walker"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

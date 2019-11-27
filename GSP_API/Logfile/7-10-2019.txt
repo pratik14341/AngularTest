@@ -1,0 +1,39 @@
+
+
+==========================Mon Oct 07 2019 12:15:07 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= division by zero
+Error Desc:= message error: division by zero
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 22012
+{"All":{"name":"error","length":3475,"severity":"ERROR","code":"22012","where":"SQL statement \"SELECT array_to_json(array_agg(kk))                   FROM (\r\n\t\tselect \r\n\t\tcm.id\r\n\t\t,cm.customercode as cc\r\n\t\t,cm.customercreateddate as ccd\r\n\t\t,CASE WHEN((gstpan::int + legalstatus::int + legaldepartment::int + creditorder::int + legalcaseother::int + balanceconfirm::int + chequereturn::int + inactivecustomer::int + specialcase::int + caseremark::int) > 0 ) \r\n\t\t\tthen true \r\n\t\t\telse false \r\n\t\t\tend as ib\r\n\t\t,CASE WHEN(gstpan = 1::bit) then 'GST/PAN,' else '' end \r\n\t\t|| CASE WHEN(legalstatus = 1::bit) then 'Legal Status,' else '' end \r\n\t\t|| CASE WHEN(legaldepartment = 1::bit) then 'Legal Department,'  else '' end \r\n\t\t|| CASE WHEN(creditorder = 1::bit) then 'Credit-Order Block,' else '' end\r\n\t\t|| CASE WHEN(legalcaseother = 1::bit) then 'Legal Case to Other Company,'  else '' end \r\n\t\t|| CASE WHEN(balanceconfirm = 1::bit) then 'Balance Confirmation,'  else '' end \r\n\t\t|| CASE WHEN(chequereturn = 1::bit) then 'Cheque Return,'  else '' end \r\n\t\t|| CASE WHEN(inactivecustomer = 1::bit) then 'Inactive Customer,'  else '' end\r\n\t\t|| CASE WHEN(specialcase = 1::bit) then 'Special Case,'  else '' end \r\n\t\t|| CASE WHEN(caseremark = 1::bit) then 'Sp. Case Remark,'  else '' end as br\r\n\t\t,cm.customername as cn\r\n\t\t,cd.city1 as c\r\n\t\t,cd.mobileno as mn\r\n\t\t--,cm.customercategoryid as cci\r\n\t\t,cc.lookupvalue as  ccat -- customercatagory\r\n\t\t--,cm.customertypeid as cti\r\n\t\t,ct.lookupvalue as ct-- customertype\r\n\t\t,category.lookupvalue as cat--category\r\n\t\t--,cm.categoryid\tas ci\r\n\t\t,COALESCE(cd.address1||'\\n','') ||COALESCE(address2||'\\n','') ||COALESCE(city1||'\\n','')||COALESCE(regiondescription)||'-'||COALESCE(postalcode) as ad--address\r\n\t\t,CASE WHEN((CASE WHEN(cm.tea is not null) then 1 else 0 end + CASE WHEN(cm.mango is not null) then 1 else 0 end + CASE WHEN(cm.seeds is not null) then 1 else 0 end) > 0) then true else false end as ic--iscrop\r\n\t\t,CASE WHEN(cm.tea is not null) then 'Tea,' else '' end || CASE WHEN(cm.mango is not null) then 'Mango,' else '' end || CASE WHEN(cm.seeds is not null) then 'Seeds' else '' end as crop\r\n\t\t,t.lat\r\n\t\t,t.lng\r\n\t\t,cm.zoneid as zi\r\n\t\t,cd.subregionid as sri\r\n\t\t,cd.salesofficeid as  di--depotid\r\n\t\t,cd.salesdistrictid as sdi\r\n\t\t,tsr.sales as s\r\n\t\t,CASE WHEN(cm.abpvalue>0) then 100 else  (tsr.sales*100)/cm.abpvalue end as sper\r\n\t\t,tsr.salesreturn as sr\r\n\t\t,cm.creditlimit as cl\r\n\t\t,tcr.collection as col\r\n\t\t,tar.outstanding as o\r\n\t\t,tdso.averagedays as a\r\n\t\tfrom tblcustomermaster as cm\r\n\t\tinner join tblcustomerdetail as cd on cd.cid=cm.id\r\n\t\tleft join tbllookupvalues as cc on cc.lookupvalueid = cm.customercategoryid\r\n\t\tleft join tbllookupvalues as ct on ct.lookupvalueid = cm.customertypeid\r\n\t\tleft join tbllookupvalues as category on category.lookupvalueid = cm.categoryid\r\n\t\tleft join temp_tblsalesreport as tsr on tsr.customercodeid = cm.id\r\n\t\tleft join temp_tblcollectionreport as tcr on tcr.customercodeid = cm.id\r\n\t\tleft join temp_tblagingreport as tar on tar.customercodeid = cm.id\r\n\t\tleft join temp_tbldsoreport as tdso on tdso.customercodeid = cm.id\r\n\t\tleft join (\r\n\t\tselect \r\n\t\trow_number() over(partition by customerid order by id desc) as no\r\n\t\t,customerid\r\n\t\t,lat\r\n\t\t,lng\r\n\t\tfrom tblcustomerlatlong  ) as t on t.no=1 and t.customerid = cm.id\r\n\t\twhere inactivecustomer=0::bit) as kk\"\nPL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 101 at SQL statement","file":"numeric.c","line":"6828","routine":"div_var"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"mode","value":"1","type":"int"},{"name":"userid","value":"5","type":"int"}]
+
+
+==========================Mon Oct 07 2019 13:11:50 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= Cannot read property 'toString' of undefined
+Error Desc:= message TypeError: Cannot read property 'toString' of undefined
+    at toString (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:24:43)
+    at Array.forEach (<anonymous>)
+    at Object.forEach [as executefunction] (C:\Pratik\SVN\GSP Admin\GSP_API\db/index.js:21:16)
+    at Object.executefunction [as LocalLoadGrid] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:267:37)
+    at Object.LocalLoadGrid [as LoadGrid] (C:\Pratik\SVN\GSP Admin\GSP_API\_helpers/AllFunction.js:250:25)
+    at LoadGrid (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:294:44)
+    at Object.middleware [as wrape] (C:\Pratik\SVN\GSP Admin\GSP_API\component/middlewareWrapper.js:40:29)
+    at wrape (C:\Pratik\SVN\GSP Admin\GSP_API\services/customer.js:285:29)
+    at dispatch (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+code 
+{"All":{}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","type":"string"},{"name":"pagecount","type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"13","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"customerid","value":12,"type":"int"}]

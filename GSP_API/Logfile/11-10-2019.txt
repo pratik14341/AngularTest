@@ -1,0 +1,76 @@
+
+
+==========================Fri Oct 11 2019 06:51:16 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= function usp_tblcustomermaster(p_skip => unknown, p_pagecount => unknown, p_orderby => unknown, p_otherfilter => unknown, p_mode => integer, p_userid => integer, p_invoiceno => integer) does not exist
+Error Desc:= message error: function usp_tblcustomermaster(p_skip => unknown, p_pagecount => unknown, p_orderby => unknown, p_otherfilter => unknown, p_mode => integer, p_userid => integer, p_invoiceno => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42883
+{"All":{"name":"error","length":368,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"14","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"invoiceno","value":"1915550432","type":"int"}]
+
+
+==========================Fri Oct 11 2019 06:51:16 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= function usp_tblcustomermaster(p_skip => unknown, p_pagecount => unknown, p_orderby => unknown, p_otherfilter => unknown, p_mode => integer, p_userid => integer, p_invoiceno => integer) does not exist
+Error Desc:= message error: function usp_tblcustomermaster(p_skip => unknown, p_pagecount => unknown, p_orderby => unknown, p_otherfilter => unknown, p_mode => integer, p_userid => integer, p_invoiceno => integer) does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42883
+{"All":{"name":"error","length":368,"severity":"ERROR","code":"42883","hint":"No function matches the given name and argument types. You might need to add explicit type casts.","position":"9","file":"parse_func.c","line":"523","routine":"ParseFuncOrColumn"}}
+Store Proc := 
+Function name := executefunction
+Para := ""
+
+
+==========================Fri Oct 11 2019 06:53:02 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= operator does not exist: character varying = integer
+Error Desc:= message error: operator does not exist: character varying = integer
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42883
+{"All":{"name":"error","length":854,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"408","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select  count(1) OVER () AS counts, \r\n\t\tinvoiceno\r\n\t\t,mm.materialdescription\r\n\t\t,sr.qty\r\n\t\t,sr.qtycase as case\r\n\t\t,sr.finaltaxablevalue as netvalue\r\n\t\t,cgstamt + sgstamt + igstamt as gst\r\n\t\t,finaltaxablevalue + cgstamt + sgstamt + igstamt as netamount\r\n\t\tfrom tblsalesreport as sr\r\n\t\tleft join tblmaterialmaster as mm on mm.id = sr.materialid\r\n\t\twhere sr.invoiceno = 1915250687 and  1 = 1  ORDER BY 1 desc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 736 at EXECUTE","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := usp_tblcustomermaster
+Function name := executefunction
+Para := [{"name":"skip","value":0,"type":"string"},{"name":"pagecount","value":50,"type":"string"},{"name":"orderby","value":"1 desc","type":"string"},{"name":"otherfilter","value":" 1 = 1 ","type":"string"},{"name":"mode","value":"14","type":"int"},{"name":"userid","value":"5","type":"int"},{"name":"invoiceno","value":"1915250687","type":"string"}]
+
+
+==========================Fri Oct 11 2019 06:53:02 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= operator does not exist: character varying = integer
+Error Desc:= message error: operator does not exist: character varying = integer
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42883
+{"All":{"name":"error","length":854,"severity":"ERROR","code":"42883","hint":"No operator matches the given name and argument type(s). You might need to add explicit type casts.","internalPosition":"408","internalQuery":"SELECT array_to_json(array_agg(kk)) FROM (select  count(1) OVER () AS counts, \r\n\t\tinvoiceno\r\n\t\t,mm.materialdescription\r\n\t\t,sr.qty\r\n\t\t,sr.qtycase as case\r\n\t\t,sr.finaltaxablevalue as netvalue\r\n\t\t,cgstamt + sgstamt + igstamt as gst\r\n\t\t,finaltaxablevalue + cgstamt + sgstamt + igstamt as netamount\r\n\t\tfrom tblsalesreport as sr\r\n\t\tleft join tblmaterialmaster as mm on mm.id = sr.materialid\r\n\t\twhere sr.invoiceno = 1915250687 and  1 = 1  ORDER BY 1 desc OFFSET 0 ROWS FETCH NEXT 50 ROWS ONLY ) as kk ","where":"PL/pgSQL function usp_tblcustomermaster(integer,integer,integer,integer,integer,text,character varying,character varying) line 736 at EXECUTE","file":"parse_oper.c","line":"726","routine":"op_error"}}
+Store Proc := 
+Function name := executefunction
+Para := ""

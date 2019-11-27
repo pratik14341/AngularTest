@@ -1,0 +1,76 @@
+
+
+==========================Wed Oct 02 2019 08:58:16 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column reference "email" is ambiguous
+Error Desc:= message error: column reference "email" is ambiguous
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42702
+{"All":{"name":"error","length":501,"severity":"ERROR","code":"42702","internalPosition":"229","internalQuery":"SELECT Exists(select 1 from  tbluserlogin ul\r\n\t\t\tinner join (select email from json_to_recordset(p_json) as td(email character varying))\r\n\t\t\t as t on (t.email = ul.email ) where ul.isinactive = false and ul.userid!=p_userid and email is null and email != '' )","where":"PL/pgSQL function usp_userlogincrud(integer,integer,integer,character varying,text,json,integer,boolean,integer) line 312 at IF","file":"parse_relation.c","line":"670","routine":"scanRTEForColumn"}}
+Store Proc := usp_userlogincrud
+Function name := executefunction
+Para := [{"name":"mode","value":"7","type":"int"},{"name":"userid","value":0,"type":"int"},{"name":"json","value":"[{\"username\":\"9898503864\",\"displayname\":\"\",\"employeecode\":\"\",\"address1\":\"\",\"address2\":\"\",\"pincode\":\"\",\"genderid\":\"\",\"designation\":\"\",\"usertypeid\":\"\",\"subusertypeid\":\"\",\"email\":\"\",\"dob\":null,\"salescode\":\"\",\"gradeid\":\"\",\"headquarterid\":\"\",\"vehicleid\":\"\",\"roleid\":\"\"}]","type":"string"}]
+
+
+==========================Wed Oct 02 2019 08:58:47 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column reference "email" is ambiguous
+Error Desc:= message error: column reference "email" is ambiguous
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42702
+{"All":{"name":"error","length":503,"severity":"ERROR","code":"42702","internalPosition":"229","internalQuery":"SELECT Exists(select 1 from  tbluserlogin ul\r\n\t\t\tinner join (select email from json_to_recordset(p_json) as td(email character varying))\r\n\t\t\t as t on (t.email = ul.email ) where ul.isinactive = false and ul.userid!=p_userid and email is null and email != '''' )","where":"PL/pgSQL function usp_userlogincrud(integer,integer,integer,character varying,text,json,integer,boolean,integer) line 312 at IF","file":"parse_relation.c","line":"670","routine":"scanRTEForColumn"}}
+Store Proc := usp_userlogincrud
+Function name := executefunction
+Para := [{"name":"mode","value":"7","type":"int"},{"name":"userid","value":0,"type":"int"},{"name":"json","value":"[{\"username\":\"9898503864\",\"displayname\":\"\",\"employeecode\":\"\",\"address1\":\"\",\"address2\":\"\",\"pincode\":\"\",\"genderid\":\"\",\"designation\":\"\",\"usertypeid\":\"\",\"subusertypeid\":\"\",\"email\":\"\",\"dob\":null,\"salescode\":\"\",\"gradeid\":\"\",\"headquarterid\":\"\",\"vehicleid\":\"\",\"roleid\":\"\"}]","type":"string"}]
+
+
+==========================Wed Oct 02 2019 09:01:05 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column reference "email" is ambiguous
+Error Desc:= message error: column reference "email" is ambiguous
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42702
+{"All":{"name":"error","length":501,"severity":"ERROR","code":"42702","internalPosition":"229","internalQuery":"SELECT Exists(select 1 from  tbluserlogin ul\r\n\t\t\tinner join (select email from json_to_recordset(p_json) as td(email character varying))\r\n\t\t\t as t on (t.email = ul.email ) where ul.isinactive = false and ul.userid!=p_userid and email is null and email != '' )","where":"PL/pgSQL function usp_userlogincrud(integer,integer,integer,character varying,text,json,integer,boolean,integer) line 312 at IF","file":"parse_relation.c","line":"670","routine":"scanRTEForColumn"}}
+Store Proc := usp_userlogincrud
+Function name := executefunction
+Para := [{"name":"mode","value":"7","type":"int"},{"name":"userid","value":0,"type":"int"},{"name":"json","value":"[{\"username\":\"9898503864\",\"displayname\":\"\",\"employeecode\":\"\",\"address1\":\"\",\"address2\":\"\",\"pincode\":\"\",\"genderid\":\"\",\"designation\":\"\",\"usertypeid\":\"\",\"subusertypeid\":\"\",\"email\":\"\",\"dob\":null,\"salescode\":\"\",\"gradeid\":\"\",\"headquarterid\":\"\",\"vehicleid\":\"\",\"roleid\":\"\"}]","type":"string"}]
+
+
+==========================Wed Oct 02 2019 09:02:57 GMT+0100 (GMT Daylight Time)==========================
+Error Message:= column t.username does not exist
+Error Desc:= message error: column t.username does not exist
+    at Connection.parseE (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:604:11)
+    at Connection.parseMessage (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:401:19)
+    at Socket.<anonymous> (C:\Pratik\SVN\GSP Admin\GSP_API\node_modules\pg\lib\connection.js:121:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:597:20)
+code 42703
+{"All":{"name":"error","length":597,"severity":"ERROR","code":"42703","hint":"Perhaps you meant to reference the column \"ul.username\".","internalPosition":"166","internalQuery":"SELECT Exists(select 1 from  tbluserlogin ul\r\n\t\t\tinner join (select employeecode from json_to_recordset(p_json) as td(employeecode character varying))\r\n\t\t\t as t on (t.username=ul.username or t.email = ul.email or t.employeecode = ul.employeecode) where ul.isinactive = false and ul.userid!=p_userid)","where":"PL/pgSQL function usp_userlogincrud(integer,integer,integer,character varying,text,json,integer,boolean,integer) line 312 at IF","file":"parse_relation.c","line":"3194","routine":"errorMissingColumn"}}
+Store Proc := usp_userlogincrud
+Function name := executefunction
+Para := [{"name":"mode","value":"7","type":"int"},{"name":"userid","value":0,"type":"int"},{"name":"json","value":"[{\"username\":\"9898503864\",\"displayname\":\"\",\"employeecode\":\"\",\"address1\":\"\",\"address2\":\"\",\"pincode\":\"\",\"genderid\":\"\",\"designation\":\"\",\"usertypeid\":\"\",\"subusertypeid\":\"\",\"email\":\"\",\"dob\":null,\"salescode\":\"\",\"gradeid\":\"\",\"headquarterid\":\"\",\"vehicleid\":\"\",\"roleid\":\"\"}]","type":"string"}]

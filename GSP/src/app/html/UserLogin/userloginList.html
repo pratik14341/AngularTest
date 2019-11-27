@@ -1,0 +1,25 @@
+<div class="page_title ng-scope">
+    <p class="title_path">
+        User Management > Users
+    </p>
+    <div class="header_btns">
+        <button class="btn btn_icon" title="New" (click)="New()" *hasrights="['userlogin','write']">
+            <img src="/src/app/images/icons/additem_header_icon.png">
+        </button>
+        <button class="btn btn_icon" title="Refresh" (click)="Refresh()" *hasrights="['userlogin','write']">
+            <img src="/src/app/images/icons/refresh_header_icon.png">
+        </button>
+        <button class="btn btn_icon" title="Save As Excel" (click)="SaveasExcel()" *hasrights="['userlogin','write']">
+                <img src="/src/app/images/icons/export_exl_icon.png">
+        </button>
+    </div>
+</div>
+
+<div>
+    <my-grid [id]="'userloginList'" [height]="gridHeight" [url]="'/userlogin/list'" [columnsConfig]="columnsConfig"
+        fileName="userlogin.xlsx" [KeyGridSelectBy]="'userid'">
+        <!-- [KeyGridSelectBy]="'ProductID'" [MultiSelectGrid]="true" -->
+    </my-grid>
+</div>
+<confirm-dialogs [dialogOpened]=sendSMSdialogOpened (confirmFunction)="confirmSendSMS($event)" [title]=title [message]=message ></confirm-dialogs>
+<confirm-dialogs [dialogOpened]=inActivedialogOpened (confirmFunction)="confirmUserActiveInActive($event)" [title]=title [message]=message ></confirm-dialogs>
