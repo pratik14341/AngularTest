@@ -1,7 +1,7 @@
 const Router = require('koa-router');
 const crypto = require('../_helpers/criptoHelper')();
 const MiddlewareWrapper = require('../component/middlewareWrapper');
-const userLoginAction = require('../action/userlogin');
+const userLoginAction = require('../action/userLogin');
 
 const router1 = new Router();
 router1.post('/userlogin/list', async (req) => {
