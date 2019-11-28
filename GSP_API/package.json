@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "SET NODE_ENV=test && nodemon --exec babel-node app.js",
+	"start_pro": "nodemon --exec babel-node app.js",
     "prodbuild" : "dist --copy-files"
   },
   "dependencies": {
