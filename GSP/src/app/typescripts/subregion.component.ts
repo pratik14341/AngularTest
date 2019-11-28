@@ -7,7 +7,7 @@ import { Cookies } from '../_helpers/cookies';
 import { GlobalFunctionVariables } from "../_helpers/GlobalFunctionVariables";
 
 @Component({
-    templateUrl: '../html/subregionList.html'
+    templateUrl: '../html/subregionlist.html'
 })
 export class subregionListComponent implements OnInit {
 
