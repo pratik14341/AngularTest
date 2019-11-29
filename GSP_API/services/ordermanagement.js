@@ -25,4 +25,17 @@ router1.post('/order/getorderhistory', async (req, res) => {
     });
 });
 
+router1.post('/order/getorderapprovallist', async (req, res) => {
+    await MiddlewareWrapper.wrape(req, null, async () => {
+        let userId = crypto.decrypt(req.request.header.i.toString());
+        return await orderManagementAction.getOrderApprovalList(req.request.body, {userId})
+    });
+});
+
+router1.post('/order/saveorderapproval', async (req, res) => {
+    await MiddlewareWrapper.wrape(req, null, async () => {
+        let userId = crypto.decrypt(req.request.header.i.toString());
+        return await orderManagementAction.saveOrderApproval(req.request.body, {userId})
+    });
+});
 module.exports = router1;

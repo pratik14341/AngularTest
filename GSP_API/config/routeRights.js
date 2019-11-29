@@ -81,6 +81,8 @@ module.exports = {
     'order/list': 'customermaster~w',
     'order/saveorder': 'customermaster~w',
     'order/getorderhistory': 'customermaster~w',
+    'order/getorderapprovallist': 'customermaster~w',
+    'order/saveorderapproval': 'customermaster~w',
 
     // Sales Report
     'salesreport/list': 'salesreport~r',

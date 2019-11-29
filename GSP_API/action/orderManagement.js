@@ -9,5 +9,11 @@ module.exports = {
     },
     getOrderHistory :  async(body, args) => {
         return await orderManagementModel.getOrderHistory(body, args);
+    },
+    getOrderApprovalList :  async(body, args) => {
+        return await orderManagementModel.getOrderApprovalList(body, args);
+    },
+    saveOrderApproval :  async(body, args) => {
+        return await orderManagementModel.saveOrderApproval(body, args);
     }
 }

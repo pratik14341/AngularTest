@@ -29,7 +29,7 @@ fs.readdirSync('./services').map(fileName => {
 // app.use(require('./services/employee').routes());
 // app.use(require('./services/common').routes());
 
-app.listen(port, () => console.log('Server running on http://localhost:' + port));
+app.listen(port,'10.20.1.83');
 
 function* handle404Errors(next) {
     //  console.log('handle404Errors');
