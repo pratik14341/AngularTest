@@ -2,7 +2,7 @@
 
 const wkhtmltopdf = require('wkhtmltopdf');
 const config = require('../config');
-wkhtmltopdf.command = 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
+//wkhtmltopdf.command = 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe';
 //const headerhtml = require('../reports/headerhtml');
 
 module.exports = {  
